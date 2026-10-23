@@ -1,0 +1,27 @@
+{
+  "name": "Lindsay Marshall \u00b7 Marketing Portfolio",
+  "short_name": "Lindsay Marshall",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#5c374c",
+  "theme_color": "#5c374c",
+  "icons": [
+    {
+      "src": "icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "icons/icon-maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}
