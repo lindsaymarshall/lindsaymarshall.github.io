@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Page not found · Lindsay Marshall</title>
+<meta name="theme-color" content="#5c374c">
+<link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32.png">
+<link rel="apple-touch-icon" href="/icons/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Ms+Madi&family=Montserrat:wght@500;700&display=swap">
+<style>
+  :root { --plum: #5c374c; --peach: #ffd3b8; --coral: #ff8c61; color-scheme: dark; }
+  html, body { height: 100%; margin: 0; }
+  body { background: var(--plum); color: var(--peach); font-family: Montserrat, "Helvetica Neue", Arial, sans-serif; display: grid; place-items: center;
+         padding: max(24px, env(safe-area-inset-top)) max(20px, env(safe-area-inset-right)) max(24px, env(safe-area-inset-bottom)) max(20px, env(safe-area-inset-left)); box-sizing: border-box; -webkit-text-size-adjust: 100%; }
+  main { max-width: 560px; text-align: center; position: relative; }
+  svg { width: 40px; height: 40px; fill: var(--coral); }
+  .code { margin: 8px 0 0; font: 400 clamp(96px, 30vw, 180px)/.9 Anton, Impact, sans-serif; letter-spacing: .02em; }
+  .script { margin: -.1em 0 .5em; font: 400 clamp(56px, 16vw, 92px)/1 "Ms Madi", cursive; color: var(--coral); transform: scaleY(1.25); }
+  p { margin: 0 0 28px; font-size: 17px; line-height: 1.6; }
+  a { display: inline-flex; align-items: center; gap: .5em; padding: 15px 28px; border-radius: 999px; background: var(--coral); color: var(--plum);
+      font-weight: 700; font-size: 17px; text-decoration: none; transition: transform .18s ease, background-color .18s; }
+  a:hover, a:focus-visible { transform: scale(1.05); background: #ffa07c; }
+  a:focus-visible { outline: 2px solid var(--peach); outline-offset: 3px; }
+  @media (hover: none) { a:hover { transform: none; background: var(--coral); } }
+  @media (prefers-reduced-motion: no-preference) { main > * { animation: up .7s cubic-bezier(.2,.7,.2,1) both; } main > :nth-child(2) { animation-delay: .08s; }
+    main > :nth-child(3) { animation-delay: .16s; } main > :nth-child(4) { animation-delay: .24s; } main > :nth-child(5) { animation-delay: .32s; } }
+  @keyframes up { from { opacity: 0; translate: 0 18px; } to { opacity: 1; translate: none; } }
+</style>
+</head>
+<body>
+<main>
+  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0c.6 6.6 5.4 11.4 12 12-6.6.6-11.4 5.4-12 12-.6-6.6-5.4-11.4-12-12C6.6 11.4 11.4 6.6 12 0z"/></svg>
+  <h1 class="code">404</h1>
+  <p class="script">Oops!</p>
+  <p>This page doesn’t exist, but my portfolio does.</p>
+  <a href="/">Back to my portfolio <span aria-hidden="true">&rarr;</span></a>
+</main>
+</body>
+</html>

@@ -12,9 +12,17 @@
 <link rel="icon" type="image/png" sizes="192x192" href="icons/icon-192.png">
 <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
 <link rel="manifest" href="manifest.webmanifest">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://lindsaymarshall.github.io/">
+<meta property="og:site_name" content="Lindsay Marshall">
 <meta property="og:title" content="Lindsay Marshall · Marketing Portfolio">
 <meta property="og:description" content="JMU marketing student, Class of 2027. Campaigns, design work and internships.">
-<meta property="og:image" content="https://lindsaymarshall.github.io/icons/icon-512.png">
+<meta property="og:image" content="https://lindsaymarshall.github.io/icons/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Lindsay Marshall, Marketing Portfolio">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://lindsaymarshall.github.io/">
 <title>Lindsay Marshall Portfolio</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Ms+Madi&family=Shadows+Into+Light+Two&family=Montserrat:wght@400;600;700&family=Archivo:wght@600;700&display=swap">
 <style>
@@ -781,7 +789,13 @@ a.t[href^="http"] { text-decoration: underline; text-decoration-color: var(--cor
     if (target) { window.scrollTo({ top: target.getBoundingClientRect().top + window.pageYOffset - 70, behavior: how }); }
     else { window.scrollTo({ top: 0, behavior: how }); }
     if (!fromHash) { try { history.replaceState(null, '', '#' + v[0]); } catch (e) {} }
+    if (!same) track();
   }
+  // visitor counting on the live site (GoatCounter); each tab counts as its own page
+  function track() {
+    if (window.goatcounter && window.goatcounter.count) window.goatcounter.count({ path: '/' + current, title: document.title });
+  }
+  window.__track = track;
   document.addEventListener('click', function (e) {
     var a = e.target.closest('a[href^="#"]');
     if (!a) return;
