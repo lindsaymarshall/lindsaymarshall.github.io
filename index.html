@@ -102,7 +102,7 @@ a.t:focus-visible, .hit:focus-visible, .snd:focus-visible { outline: 2px solid v
   .sec > .t .ln { display: inline; }
   .sec > .t .ln::after { content: " "; }
   .sec > .t.dsp { font-size: min(calc(var(--fs) * .42px), 14vw); line-height: 1.04; }
-  .sec > .t.scr { font-size: min(calc(var(--fs) * .55px), 16vw); line-height: 1.25; }
+  .sec > .t.scr { font-size: min(calc(var(--fs) * .55px), 14vw); line-height: 1.05; padding-block: .14em .1em; }
   .sec > .t.hand { font-size: calc(var(--fs) * .5px); }
   .sec > .t.bod, .sec > .t.lab { font-size: 16px; line-height: 1.55; }
   .sec > .t.mont { font-size: 15px; line-height: 1.5; }
@@ -510,6 +510,13 @@ a.t[href^="http"] { text-decoration: underline; text-decoration-color: var(--cor
 @media (min-width: 700px) { .phone-only { display: none; } }
 @media (max-width: 699px) { .desk-only { display: none; } }
 
+/* phones: keep each button's arrow on the same line as its text */
+@media (max-width: 699px) {
+  .ed-verify a, .ed-project { display: block; text-align: center; letter-spacing: .02em; font-size: 13.5px; padding: 13px 16px; }
+  .ed-actions { display: block; }
+  .ed-project { width: 100%; box-sizing: border-box; letter-spacing: 0; padding: 13px 10px; white-space: nowrap; }
+}
+
 </style>
 </head>
 <body>
@@ -578,7 +585,7 @@ a.t[href^="http"] { text-decoration: underline; text-decoration-color: var(--cor
 <div class="dw-head"><h2 id="dw-title">Design Work</h2>
 <p class="dw-sub"><span class="dw-hover">Hover over</span><span class="dw-tap">Tap</span> a design to take a closer look</p></div>
 <div class="dw-row" id="ai-work">
-<div class="dw-label"><img src="a/3b2ac8ab.png" alt="" width="44" height="44"><h3>Illustrator</h3><span>8 projects</span></div>
+<div class="dw-label"><img src="a/3b2ac8ab.png" alt="" width="44" height="44"><h3>Illustrator</h3></div>
 <ul class="dw-grid">
 <li><button class="dw-card" type="button" aria-label="McGreen logo redesign: Green redesign of a fast-food logo"><img src="w/ai-mcgreen-cut.png" alt="McGreen logo redesign" loading="lazy"><span class="dw-cap"><b>McGreen logo redesign</b>Green redesign of a fast-food logo</span></button></li>
 <li><button class="dw-card" type="button" aria-label="Guitar Fest social set: Two square posts and a web banner"><img src="w/ai-guitar-social.jpg" alt="Guitar Fest social set" loading="lazy"><span class="dw-cap"><b>Guitar Fest social set</b>Two square posts and a web banner</span></button></li>
@@ -590,7 +597,7 @@ a.t[href^="http"] { text-decoration: underline; text-decoration-color: var(--cor
 <li><button class="dw-card" type="button" aria-label="Negative space logo: Pine trees and a river in one mark"><img src="w/ai-negative-cut.png" alt="Negative space logo" loading="lazy"><span class="dw-cap"><b>Negative space logo</b>Pine trees and a river in one mark</span></button></li>
 </ul></div>
 <div class="dw-row" id="ps-work">
-<div class="dw-label"><img src="a/777228a8.png" alt="" width="44" height="44"><h3>Photoshop</h3><span>6 projects</span></div>
+<div class="dw-label"><img src="a/777228a8.png" alt="" width="44" height="44"><h3>Photoshop</h3></div>
 <ul class="dw-grid">
 <li><button class="dw-card" type="button" aria-label="Five Guys summer ad: Social ad: Summer Starts with Five Guys"><img src="w/ps-fiveguys.jpg" alt="Five Guys summer ad" loading="lazy"><span class="dw-cap"><b>Five Guys summer ad</b>Social ad: Summer Starts with Five Guys</span></button></li>
 <li><button class="dw-card" type="button" aria-label="Greetings from Wyoming: Vintage postcard composite"><img src="w/ps-wyoming.jpg" alt="Greetings from Wyoming" loading="lazy"><span class="dw-cap"><b>Greetings from Wyoming</b>Vintage postcard composite</span></button></li>
@@ -600,7 +607,7 @@ a.t[href^="http"] { text-decoration: underline; text-decoration-color: var(--cor
 <li><button class="dw-card" type="button" aria-label="Citrus Lane Farms ad: Product photo with brand logo"><img src="w/ps-citrus.jpg" alt="Citrus Lane Farms ad" loading="lazy"><span class="dw-cap"><b>Citrus Lane Farms ad</b>Product photo with brand logo</span></button></li>
 </ul></div>
 <div class="dw-row" id="id-work">
-<div class="dw-label"><img src="w/icon-id.png" alt="" width="44" height="44"><h3>InDesign</h3><span>6 projects</span></div>
+<div class="dw-label"><img src="w/icon-id.png" alt="" width="44" height="44"><h3>InDesign</h3></div>
 <ul class="dw-grid">
 <li><button class="dw-card" type="button" aria-label="College Journey magazine: Cover: freshman 2025 to senior 2026"><img src="w/id-journey.jpg" alt="College Journey magazine" loading="lazy"><span class="dw-cap"><b>College Journey magazine</b>Cover: freshman 2025 to senior 2026</span></button></li>
 <li><button class="dw-card" type="button" aria-label="A Glimpse Into My Life: Personal magazine cover"><img src="w/id-glimpse.jpg" alt="A Glimpse Into My Life" loading="lazy"><span class="dw-cap"><b>A Glimpse Into My Life</b>Personal magazine cover</span></button></li>
@@ -641,7 +648,7 @@ a.t[href^="http"] { text-decoration: underline; text-decoration-color: var(--cor
 <li><span class="ed-code">LinkedIn Learning</span><b>Market Research: Qualitative</b><span class="ed-note">March 2026</span></li>
 <li><span class="ed-code">LinkedIn Learning</span><b>Storytelling for Advertising Campaigns</b><span class="ed-note">February 2026</span></li>
 </ul>
-<p class="ed-verify"><a href="https://www.linkedin.com/in/lindsay-marshall" target="_blank" rel="noopener">See every credential on LinkedIn &rarr;</a></p></div>
+<p class="ed-verify"><a href="https://www.linkedin.com/in/lindsay-marshall" target="_blank" rel="noopener">See every credential on LinkedIn&nbsp;&rarr;</a></p></div>
 <h3 class="ed-h"><span>Relevant Coursework</span></h3>
 <div class="ed-card ed-course-card">
 <details class="ed-drop"><summary><span class="ed-group">Marketing</span></summary>
@@ -662,9 +669,9 @@ a.t[href^="http"] { text-decoration: underline; text-decoration-color: var(--cor
 <div class="ed-feature-text"><span class="ed-code">COB 300 · Integrated Business</span><b>Business plan: SmartStep, LLC</b>
 <p>A one-semester course that combines management, finance, operations, and marketing. Our nine-person team built a complete plan to launch SmartStep, a sensor-enabled smart insole that pairs with a mobile app to track stride, posture, and weight distribution to help prevent injuries.</p>
 <div class="ed-learned"><h5>Concepts I learned</h5><ul><li>Organizational charts and compensation design: pay, benefits, and the skills each role needs</li><li>Market segmentation and target market selection</li><li>Market sizing and demand forecasting</li><li>Positioning and competitive analysis</li><li>The marketing mix: product, price, place, and promotion</li><li>Process mapping and quality assurance</li><li>Inventory, supplier and distribution planning</li><li>Capacity planning</li><li>Building an income statement, balance sheet and cash flow statement</li><li>Ratio analysis: liquidity, asset management, and profitability</li><li>Startup financing: founder investment and a bank loan</li></ul></div>
-<div class="ed-actions"><a class="ed-project ed-ghost" href="https://www.linkedin.com/in/lindsay-marshall/details/projects/" target="_blank" rel="noopener">See the project on LinkedIn &rarr;</a></div>
+<div class="ed-actions"><a class="ed-project ed-ghost" href="https://www.linkedin.com/in/lindsay-marshall/details/projects/" target="_blank" rel="noopener">See the project on LinkedIn&nbsp;&rarr;</a></div>
 </div><ul class="dw-grid ed-certs ed-shots">
-<li><button class="dw-card ed-open" type="button" data-open-doc="bp" aria-label="Read the full business plan"><img src="bplan/page-01.jpg" alt="Cover of the SmartStep business plan" loading="lazy"><span class="ed-open-tag">Read the full business plan &rarr;</span></button></li>
+<li><button class="dw-card ed-open" type="button" data-open-doc="bp" aria-label="Read the full business plan"><img src="bplan/page-01.jpg" alt="Cover of the SmartStep business plan" loading="lazy"><span class="ed-open-tag">Read the full business plan&nbsp;&rarr;</span></button></li>
 </ul></div>
 <ul class="ed-list">
 <li><span class="ed-code">COB 241</span><b>Financial Accounting</b><span class="ed-note">Financial statements and reporting</span></li>
