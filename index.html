@@ -539,8 +539,8 @@ a.t[href^="http"] { text-decoration: underline; text-decoration-color: var(--cor
               transform: scaleY(1.25); clip-path: inset(0 100% 0 0);
               /* padding gives the script's swashes room inside the box, since Safari never reveals past the box edge */
               padding: .45em .4em; margin: -.45em -.4em; }
-.intro-line { display: block; width: min(420px, 70vw); height: 2px; margin: 16px auto 18px; background: var(--coral); transform: scaleX(0); }
-.intro-kicker { margin: 0; font: 600 14px var(--sans); letter-spacing: .42em; text-transform: uppercase; color: var(--peach); opacity: 0; }
+.intro-line { display: block; width: min(520px, 78vw); height: 2px; margin: 18px auto 22px; background: var(--coral); transform: scaleX(0); }
+.intro-kicker { margin: 0; font: 600 clamp(18px, 2.2vw, 26px) var(--sans); letter-spacing: .36em; text-transform: uppercase; color: var(--peach); opacity: 0; }
 .intro.play .intro-name { animation: intro-write 2.4s .2s cubic-bezier(.45, 0, .3, 1) forwards; }
 .intro.play .intro-line { animation: intro-grow 1s 3.1s ease forwards; }
 .intro.play .intro-kicker { animation: intro-up .8s 3.5s ease forwards; }
@@ -548,7 +548,7 @@ a.t[href^="http"] { text-decoration: underline; text-decoration-color: var(--cor
 @keyframes intro-write { to { clip-path: inset(0 0 0 0); } }
 @keyframes intro-grow { to { transform: scaleX(1); } }
 @keyframes intro-up { from { opacity: 0; translate: 0 10px; } to { opacity: 1; translate: none; } }
-@media (max-width: 699px) { .intro-kicker { font-size: 12px; letter-spacing: .32em; } .intro-name { font-size: clamp(48px, 14vw, 72px); } }
+@media (max-width: 699px) { .intro-kicker { font-size: 17px; letter-spacing: .26em; } .intro-name { font-size: clamp(48px, 14vw, 72px); } }
 
 </style>
 </head>
