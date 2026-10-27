@@ -521,6 +521,29 @@ a.t[href^="http"] { text-decoration: underline; text-decoration-color: var(--cor
   .row[style*="--cols:2"] > .g:last-child:nth-child(odd) { grid-column: 1 / -1; justify-self: center; }
 }
 
+/* Opening curtain (first visit only; never shown with reduced motion) */
+.intro-on, .intro-on body { overflow: hidden; }
+.intro { position: fixed; inset: 0; z-index: 100; display: grid; place-items: center; background: var(--plum); cursor: pointer;
+         transition: transform .9s cubic-bezier(.7, 0, .2, 1); }
+.intro::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 4px; background: var(--coral); }
+.intro.out { transform: translateY(-100%); }
+.intro-in { position: relative; text-align: center; padding: 0 20px; }
+.intro-i { position: relative; display: inline-block; }
+.intro-dot { position: absolute; left: 72%; top: -.13em; width: .3em; height: .3em; margin-left: -.15em; fill: var(--coral); opacity: 0; scale: 1 .8; }
+.intro-name { margin: 0; font: 400 clamp(60px, 13vw, 150px)/1.15 var(--script); color: var(--coral); white-space: nowrap;
+              transform: scaleY(1.25); clip-path: inset(-30% 100% -45% 0); }
+.intro-line { display: block; width: min(420px, 70vw); height: 2px; margin: 16px auto 18px; background: var(--coral); transform: scaleX(0); }
+.intro-kicker { margin: 0; font: 600 14px var(--sans); letter-spacing: .42em; text-transform: uppercase; color: var(--peach); opacity: 0; }
+.intro.play .intro-name { animation: intro-write 1.4s .1s cubic-bezier(.5, 0, .3, 1) forwards; }
+.intro.play .intro-line { animation: intro-grow .7s 1.05s ease forwards; }
+.intro.play .intro-kicker { animation: intro-up .6s 1.3s ease forwards; }
+.intro.play .intro-dot { animation: intro-dot 1s 1.4s ease both; }
+@keyframes intro-dot { 0% { opacity: 0; transform: scale(.2) rotate(-60deg); } 70% { opacity: 1; transform: scale(1.35) rotate(0); } 100% { opacity: 1; transform: none; } }
+@keyframes intro-write { to { clip-path: inset(-30% -6% -45% 0); } }
+@keyframes intro-grow { to { transform: scaleX(1); } }
+@keyframes intro-up { from { opacity: 0; translate: 0 10px; } to { opacity: 1; translate: none; } }
+@media (max-width: 699px) { .intro-kicker { font-size: 12px; letter-spacing: .32em; } .intro-name { font-size: clamp(48px, 14vw, 72px); } }
+
 </style>
 </head>
 <body>
@@ -868,6 +891,44 @@ a.t[href^="http"] { text-decoration: underline; text-decoration-color: var(--cor
     });
   }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
   Array.prototype.forEach.call(els, function (el) { el.classList.add('rv'); io.observe(el); });
+})();
+
+// Opening curtain on a visitor's first page load: her name writes itself in, then the curtain lifts
+(function () {
+  var calm = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var seen = false;
+  try { seen = sessionStorage.getItem('lm-intro') === '1'; sessionStorage.setItem('lm-intro', '1'); } catch (e) {}
+  if (calm || seen) return;
+  var root = document.documentElement;
+  var el = document.createElement('div');
+  el.className = 'intro';
+  el.setAttribute('aria-hidden', 'true');
+  // the "i" in Lindsay is drawn without its dot; the star becomes the dot
+  el.innerHTML = '<div class="intro-in">' +
+    '<p class="intro-name">L<span class="intro-i">\u0131<svg class="intro-dot" viewBox="0 0 24 24"><path d="M12 0c.6 6.6 5.4 11.4 12 12-6.6.6-11.4 5.4-12 12-.6-6.6-5.4-11.4-12-12C6.6 11.4 11.4 6.6 12 0z"/></svg></span>ndsay Marshall</p>' +
+    '<span class="intro-line"></span><p class="intro-kicker">Marketing Portfolio</p></div>';
+  document.body.appendChild(el);
+  root.classList.add('intro-on');
+  var done = false;
+  function finish() {
+    if (done) return;
+    done = true;
+    el.classList.add('out');
+    root.classList.remove('intro-on');
+    // replay the page's own entrance as the curtain lifts
+    Array.prototype.forEach.call(document.querySelectorAll('.sec:not([hidden])'), function (s) {
+      s.classList.remove('enter'); void s.offsetWidth; s.classList.add('enter');
+    });
+    setTimeout(function () { el.remove(); }, 1000);
+  }
+  // a tap, click or key skips it
+  el.addEventListener('click', finish);
+  document.addEventListener('keydown', finish, { once: true });
+  var font = document.fonts && document.fonts.load ? document.fonts.load('400 80px "Ms Madi"') : Promise.resolve();
+  Promise.race([font, new Promise(function (r) { setTimeout(r, 700); })]).then(function () {
+    el.classList.add('play');
+    setTimeout(finish, 2300);
+  });
 })();
 
 </script>
