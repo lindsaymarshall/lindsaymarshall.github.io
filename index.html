@@ -23,6 +23,8 @@
 <meta property="og:image:alt" content="Lindsay Marshall, Marketing Portfolio">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="canonical" href="https://lindsaymarshall.github.io/">
+<script>window.goatcounter = { no_onload: true };</script>
+<script data-goatcounter="https://lindsaymarshall.goatcounter.com/count" async src="https://gc.zgo.at/count.js" onload="window.__track && window.__track()"></script>
 <title>Lindsay Marshall Portfolio</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Ms+Madi&family=Shadows+Into+Light+Two&family=Montserrat:wght@400;600;700&family=Archivo:wght@600;700&display=swap">
 <style>
@@ -1051,6 +1053,30 @@ document.querySelectorAll('.strip .st-track').forEach(function (track) {
     if (window.goatcounter && window.goatcounter.count) window.goatcounter.count({ path: '/' + current, title: document.title });
   }
   window.__track = track;
+  // clicks worth knowing about show up in GoatCounter as events named "click: ..."
+  function clickName(el) {
+    if (el.matches('a[href^="http"], a[href^="mailto:"], a[href^="tel:"]')) {
+      var h = el.getAttribute('href');
+      if (h.indexOf('mailto:') === 0) return 'Email';
+      if (h.indexOf('tel:') === 0) return 'Phone';
+      if (h.indexOf('linkedin.com') > -1) return 'LinkedIn';
+      return h.replace(/^https?:\/\//, '').split('/')[0];
+    }
+    if (el.matches('[data-open-doc]')) return (el.getAttribute('aria-label') || el.textContent).trim();
+    if (el.matches('.snd') && el.getAttribute('aria-label') === 'Turn sound on') {
+      var v = el.parentElement.querySelector('video');
+      return 'Sound on: ' + (v && v.getAttribute('aria-label') || 'video');
+    }
+    if (el.matches('a.hm-btn, .hm-card a, a.hit')) return (el.getAttribute('aria-label') || el.textContent).trim();
+    return null;
+  }
+  document.addEventListener('click', function (e) {
+    var el = e.target.closest && e.target.closest('a, button');
+    var name = el && clickName(el);
+    if (name && window.goatcounter && window.goatcounter.count) {
+      window.goatcounter.count({ path: 'click: ' + name.replace(/[\u2192\u00d7]/g, '').replace(/\s+/g, ' ').trim().slice(0, 80), title: current, event: true });
+    }
+  }, true);
   document.addEventListener('click', function (e) {
     var a = e.target.closest('a[href^="#"]');
     if (!a) return;
