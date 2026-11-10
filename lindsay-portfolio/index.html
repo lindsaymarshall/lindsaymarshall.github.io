@@ -1,0 +1,677 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Lindsay Marshall: marketing portfolio. JMU marketing student, Class of 2027.">
+<title>Lindsay Marshall Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Ms+Madi&family=Shadows+Into+Light+Two&family=Montserrat:wght@400;600;700&family=Archivo:wght@600;700&display=swap">
+<style>
+/* Layout: the Canva page rebuilt as 1024-unit artboard sections that scale with the window; on phones each section reflows into a single column. One plum look by design. */
+:root {
+  --plum: #5c374c;
+  --peach: #ffd3b8;
+  --coral: #ff8c61;
+  --off: #f6f5f0;
+  --ink: #111014;
+  --display: "Anton", Impact, "Arial Narrow", sans-serif;
+  --script: "Ms Madi", "Brush Script MT", cursive;
+  --hand: "Shadows Into Light Two", "Comic Sans MS", cursive;
+  --sans: "Montserrat", "Helvetica Neue", Arial, sans-serif;
+  --label: "Archivo", "Helvetica Neue", Arial, sans-serif;
+  color-scheme: dark;
+}
+body { background: var(--plum); color: var(--peach); margin: 0; }
+.page { display: block; container-type: inline-size; max-width: 1280px; margin: 0 auto; }
+.sec { --u: calc(100cqw / 1024); position: relative; height: calc(var(--sh) * var(--u)); overflow: hidden; }
+.t, .im, .r, .g, .hit {
+  position: absolute;
+  left: calc(var(--x) * var(--u));
+  top: calc(var(--y) * var(--u));
+  width: calc(var(--w) * var(--u));
+  height: calc(var(--h) * var(--u));
+  box-sizing: border-box;
+}
+.t { display: flex; align-items: center; white-space: nowrap; font-size: calc(var(--fs) * var(--u)); line-height: 1; color: var(--peach); text-decoration: none; }
+.t .in { display: block; width: 100%; }
+.t .ln { display: block; }
+.t.c { text-align: center; }
+.t.pitch { line-height: calc(var(--lh) * var(--u)); }
+.t.bod, .t.lab.pitch, .t.mont.pitch { align-items: flex-start; }
+.dsp { font-family: var(--display); font-weight: 400; }
+.scr { font-family: var(--script); color: var(--coral); }
+.scr .in { transform: scaleY(1.45); }
+.hand { font-family: var(--hand); color: var(--coral); }
+.bod, .mont { font-family: var(--sans); font-weight: 700; }
+.lab { font-family: var(--label); font-weight: 700; }
+.sel { user-select: all; -webkit-user-select: all; }
+a.t:hover { color: var(--coral); }
+a.t:focus-visible, .hit:focus-visible, .snd:focus-visible { outline: 2px solid var(--coral); outline-offset: 3px; }
+
+.im { overflow: hidden; }
+.im img { position: absolute; max-width: none; display: block; }
+.im.pb { border: calc(4 * var(--u)) solid var(--peach); }
+.im.round { border-radius: 50%; }
+.g.clip { overflow: hidden; }
+.arrow { background: no-repeat center / 100% 100% url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 70 14'%3E%3Cpath d='M0 7h66M58 1l8 6-8 6' fill='none' stroke='%235c374c' stroke-width='3.2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E"); top: calc((var(--y) - 4.5) * var(--u)); height: calc(14 * var(--u)); }
+.hit { z-index: 2; border-radius: 999px; }
+
+.vid { background: #000; }
+.vid video { width: 100%; height: 100%; object-fit: cover; display: block; }
+.ph { border: calc(7 * var(--u)) solid var(--ink); border-radius: calc(32 * var(--u)); }
+.ph .nav { position: absolute; left: 0; right: 0; bottom: 0; height: calc(46 * var(--u)); background: #fff; display: flex; justify-content: space-around; align-items: center; }
+.ph .nav i { width: calc(15 * var(--u)); height: calc(15 * var(--u)); border: calc(2 * var(--u)) solid #333; border-radius: calc(4 * var(--u)); }
+.ph .nav i:nth-child(2), .ph .nav i:nth-child(5) { border-radius: 50%; }
+.ph .pill { position: absolute; top: calc(14 * var(--u)); left: calc(16 * var(--u)); width: calc(40 * var(--u)); height: calc(9 * var(--u)); border-radius: 99px; background: rgba(255, 255, 255, .7); }
+.snd { position: absolute; right: calc(10 * var(--u)); bottom: calc(10 * var(--u)); width: calc(36 * var(--u)); height: calc(36 * var(--u)); min-width: 28px; min-height: 28px; border-radius: 50%; border: 0; background: rgba(17, 16, 20, .65); color: #fff; font-size: 14px; line-height: 1; cursor: pointer; padding: 0; z-index: 2; }
+.ph .snd { bottom: calc(56 * var(--u)); }
+
+.row { display: contents; }
+
+@media (max-width: 699px) {
+  .page { container-type: normal; }
+  .sec {
+    height: auto; overflow: visible;
+    display: flex; flex-direction: column; gap: 14px;
+    padding-block: 40px;
+    padding-left: max(16px, env(safe-area-inset-left, 0px));
+    padding-right: max(16px, env(safe-area-inset-right, 0px));
+  }
+  .sec > .decor { display: none; }
+  .sec > .t { position: static; width: auto; height: auto; display: block; white-space: normal; transform: none; }
+  .sec > .t .ln { display: inline; }
+  .sec > .t .ln::after { content: " "; }
+  .sec > .t.dsp { font-size: min(calc(var(--fs) * .42px), 14vw); line-height: 1.04; }
+  .sec > .t.scr { font-size: min(calc(var(--fs) * .55px), 16vw); line-height: 1.25; }
+  .sec > .t.hand { font-size: calc(var(--fs) * .5px); }
+  .sec > .t.bod, .sec > .t.lab { font-size: 16px; line-height: 1.55; }
+  .sec > .t.mont { font-size: 15px; line-height: 1.5; }
+  .sec > .g {
+    --u: min(1px, calc((100vw - 32px) / var(--gw)));
+    position: relative; left: auto; top: auto; flex: none; margin-inline: auto;
+    width: calc(var(--gw) * var(--u)); height: calc(var(--gh) * var(--u));
+  }
+  .row { display: grid; grid-template-columns: repeat(var(--cols), minmax(0, 1fr)); gap: 10px; align-items: start; }
+  .row > .g {
+    --u: calc((100vw - 32px - (var(--cols) - 1) * 10px) / var(--cols) / var(--gw));
+    position: relative; left: auto; top: auto;
+    width: calc(var(--gw) * var(--u)); height: calc(var(--gh) * var(--u));
+  }
+}
+@media (prefers-reduced-motion: reduce) { .vid video { animation: none; } }
+
+/* Site navigation */
+.sec { scroll-margin-top: 64px; }
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 10; background: var(--nav); }
+:root { --nav: #4a2b3d; }
+.site {
+  position: sticky; top: env(safe-area-inset-top, 0px); z-index: 20;
+  background: var(--nav);
+  border-bottom: 2px solid var(--coral);
+  box-shadow: 0 6px 18px rgba(20, 6, 14, .35);
+}
+.bar {
+  max-width: 1280px; margin: 0 auto; height: 62px; box-sizing: border-box;
+  display: flex; align-items: center; justify-content: space-between; gap: 20px;
+  padding-left: max(20px, env(safe-area-inset-left, 0px));
+  padding-right: max(20px, env(safe-area-inset-right, 0px));
+}
+.brand { font-family: var(--script); color: var(--coral); font-size: 34px; line-height: 1; text-decoration: none; white-space: nowrap; display: inline-block; transform: scaleY(1.3); padding-top: 4px; }
+.links { list-style: none; margin: 0; padding: 0; display: flex; align-items: center; gap: 6px; }
+.links a { font-family: var(--sans); font-weight: 600; font-size: 13px; letter-spacing: .12em; text-transform: uppercase; color: var(--peach); text-decoration: none; padding: 10px 12px; display: block; border-radius: 6px; position: relative; }
+.links > li > a:not(.cta)::after { content: ""; position: absolute; left: 12px; right: 12px; bottom: 4px; height: 2px; background: var(--coral); transform: scaleX(0); transform-origin: left; transition: transform .2s; }
+.links > li > a:hover::after, .links > li > a.on::after { transform: scaleX(1); }
+.links a:hover, .links a.on { color: #fff; }
+.links a:focus-visible, .menu:focus-visible, .sub-toggle:focus-visible, .brand:focus-visible { outline: 2px solid var(--coral); outline-offset: 2px; }
+.links .cta { background: var(--coral); color: var(--plum); margin-left: 8px; padding: 10px 18px; border-radius: 999px; }
+.links .cta:hover, .links .cta.on { background: var(--peach); color: var(--plum); }
+.has-sub { position: relative; display: flex; align-items: center; }
+.has-sub > a { padding-right: 4px; }
+.sub-toggle { background: none; border: 0; color: var(--peach); font-size: 12px; cursor: pointer; padding: 10px 8px 10px 2px; }
+.sub {
+  list-style: none; margin: 0; padding: 8px; position: absolute; top: 100%; left: 0; min-width: 270px;
+  background: var(--nav); border: 2px solid var(--coral); border-radius: 10px; box-shadow: 0 12px 28px rgba(20, 6, 14, .45);
+  opacity: 0; visibility: hidden; transform: translateY(6px); transition: opacity .15s, transform .15s, visibility .15s;
+}
+.has-sub:hover .sub, .has-sub:focus-within .sub, .has-sub.open .sub { opacity: 1; visibility: visible; transform: none; }
+.sub a { letter-spacing: .06em; font-size: 13px; padding: 9px 12px; }
+.sub a span { display: block; font-weight: 400; letter-spacing: .02em; text-transform: none; color: var(--muted, #d9b9c6); font-size: 12px; margin-top: 2px; }
+.sub a:hover { background: rgba(255, 140, 97, .16); }
+.menu { display: none; align-items: center; gap: 8px; background: none; border: 2px solid var(--coral); color: var(--peach); border-radius: 999px; padding: 7px 14px; font: 600 13px var(--sans); letter-spacing: .12em; text-transform: uppercase; cursor: pointer; }
+.burger, .burger::before, .burger::after { display: block; width: 16px; height: 2px; background: var(--coral); position: relative; transition: transform .2s, background .2s; }
+.burger::before, .burger::after { content: ""; position: absolute; left: 0; }
+.burger::before { top: -5px; } .burger::after { top: 5px; }
+.menu[aria-expanded="true"] .burger { background: transparent; }
+.menu[aria-expanded="true"] .burger::before { transform: translateY(5px) rotate(45deg); }
+.menu[aria-expanded="true"] .burger::after { transform: translateY(-5px) rotate(-45deg); }
+
+@media (max-width: 1180px) {
+  .bar { height: 58px; }
+  .brand { font-size: 30px; }
+  .menu { display: inline-flex; }
+  .links {
+    display: none; position: absolute; top: 100%; left: 0; right: 0;
+    flex-direction: column; align-items: stretch; gap: 0;
+    background: var(--nav); border-bottom: 2px solid var(--coral);
+    padding: 8px max(16px, env(safe-area-inset-right, 0px)) 16px max(16px, env(safe-area-inset-left, 0px));
+    max-height: calc(100vh - 60px); overflow-y: auto;
+  }
+  .links.open { display: flex; }
+  .links a { font-size: 15px; padding: 13px 4px; }
+  .links > li > a:not(.cta)::after { left: 4px; right: auto; width: 40px; bottom: 6px; }
+  .has-sub { flex-wrap: wrap; }
+  .has-sub > a { flex: 1; }
+  .sub-toggle { font-size: 16px; padding: 12px; }
+  .sub { position: static; display: none; opacity: 1; visibility: visible; transform: none; box-shadow: none; border: 0; border-left: 2px solid var(--coral); border-radius: 0; margin: 0 0 6px 6px; padding: 0 0 0 10px; min-width: 0; width: 100%; }
+  .has-sub:hover .sub, .has-sub:focus-within .sub { display: none; }
+  .has-sub.open .sub { display: block; }
+  .sub a { padding: 10px 4px; }
+  .links .cta { margin: 10px 0 0; text-align: center; }
+  .sec { scroll-margin-top: 58px; }
+}
+@media (min-width: 1181px) and (max-width: 1320px) { .links a { padding: 10px 9px; letter-spacing: .09em; } .links .cta { padding: 10px 14px; } }
+
+/* Page-to-page buttons */
+.pager { display: flex; justify-content: space-between; gap: 16px; padding-block: 28px 48px; padding-left: max(20px, env(safe-area-inset-left, 0px)); padding-right: max(20px, env(safe-area-inset-right, 0px)); border-top: 2px solid var(--coral); margin-top: 8px; }
+.pager a { display: flex; flex-direction: column; gap: 4px; text-decoration: none; color: var(--peach); border: 2px solid var(--coral); border-radius: 14px; padding: 12px 20px; min-width: 0; max-width: 48%; }
+.pager a:hover { background: var(--coral); color: var(--plum); }
+.pager a:focus-visible { outline: 2px solid var(--peach); outline-offset: 3px; }
+.pager small { font: 600 11px var(--sans); letter-spacing: .14em; text-transform: uppercase; opacity: .8; }
+.pager span { font: 400 26px/1.1 var(--display); text-transform: uppercase; }
+.pager .prev span::before { content: "\2190  "; }
+.pager .next { margin-left: auto; text-align: right; }
+.pager .next span::after { content: "  \2192"; }
+@media (max-width: 699px) { .pager span { font-size: 20px; } }
+[hidden] { display: none !important; }
+
+/* Design Work gallery */
+.sec.flow { height: auto; overflow: visible; padding-block: 24px 56px; padding-left: max(24px, env(safe-area-inset-left, 0px)); padding-right: max(24px, env(safe-area-inset-right, 0px)); }
+.dw-head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 24px; border-top: 3px solid var(--coral); padding-top: 28px; }
+.dw-head h2 { margin: 0; font: 400 clamp(44px, 8vw, 96px)/.95 var(--display); text-transform: uppercase; color: var(--peach); }
+.dw-sub { margin: 0; font-family: var(--script); color: var(--coral); font-size: clamp(30px, 4.4vw, 52px); line-height: 1; transform: scaleY(1.3); }
+.dw-row { margin-top: 40px; scroll-margin-top: 80px; }
+.dw-label { display: flex; align-items: center; gap: 14px; margin-bottom: 16px; }
+.dw-label img { width: 44px; height: 44px; border-radius: 10px; }
+.dw-label h3 { margin: 0; font: 400 clamp(30px, 3.6vw, 44px)/1 var(--display); text-transform: uppercase; color: var(--peach); }
+.dw-label span { font: 600 12px var(--sans); letter-spacing: .14em; text-transform: uppercase; color: var(--coral); border: 2px solid var(--coral); border-radius: 999px; padding: 4px 12px; }
+.dw-grid { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 18px; }
+.dw-grid li { position: relative; }
+.dw-card {
+  --ox: center;
+  display: block; width: 100%; aspect-ratio: 4 / 5; padding: 10px; border: 0; cursor: zoom-in;
+  background: var(--peach); border-radius: 12px; position: relative; z-index: 1;
+  box-shadow: 0 6px 16px rgba(20, 6, 14, .35);
+  transform-origin: var(--ox) center;
+  transition: transform .28s cubic-bezier(.2, .8, .2, 1.1), box-shadow .28s, opacity .2s;
+}
+.dw-card img { width: 100%; height: 100%; object-fit: contain; display: block; border-radius: 6px; }
+.dw-cap { position: absolute; left: 8px; right: 8px; bottom: 8px; padding: 5px 7px; border-radius: 6px; background: rgba(62, 35, 53, .92); color: var(--peach); font: 500 8px/1.35 var(--sans); text-align: left; opacity: 0; transform: translateY(6px); transition: opacity .2s, transform .2s; pointer-events: none; }
+.dw-cap b { display: block; font: 700 9px var(--sans); letter-spacing: .06em; text-transform: uppercase; color: #fff; margin-bottom: 2px; }
+.dw-grid li:nth-child(4n+1) .dw-card { --ox: left; }
+.dw-grid li:nth-child(4n) .dw-card { --ox: right; }
+.dw-card:hover, .dw-card:focus-visible, .dw-card.pop { transform: scale(1.85); z-index: 6; box-shadow: 0 24px 60px rgba(10, 2, 8, .65); }
+.dw-card:hover .dw-cap, .dw-card:focus-visible .dw-cap, .dw-card.pop .dw-cap { opacity: 1; transform: none; }
+.dw-card:focus-visible { outline: 3px solid var(--coral); outline-offset: 4px; }
+.dw-grid:hover .dw-card:not(:hover) { opacity: .55; }
+@media (prefers-reduced-motion: reduce) { .dw-card, .dw-cap { transition: none; } }
+@media (max-width: 860px) {
+  .dw-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+  .dw-grid li .dw-card { --ox: center; }
+  .dw-grid li:nth-child(odd) .dw-card { --ox: left; }
+  .dw-grid li:nth-child(even) .dw-card { --ox: right; }
+  .dw-card:hover, .dw-card:focus-visible, .dw-card.pop { transform: scale(1.75); }
+}
+@media (max-width: 699px) {
+  .sec.flow { display: block; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+}
+.dw-tap { display: none; }
+@media (hover: none) { .dw-hover { display: none; } .dw-tap { display: inline; } }
+
+/* Buttons grow a little on hover */
+.links a, .menu, .sub-toggle, .pager a, .snd, a.t, .g.btn { transition: transform .18s ease, background-color .18s, color .18s; }
+.links > li > a:hover, .links > li > a:focus-visible, .menu:hover, .sub-toggle:hover { transform: scale(1.08); }
+.sub a { transform-origin: left center; }
+.sub a:hover, .sub a:focus-visible { transform: scale(1.04); }
+.pager a:hover, .pager a:focus-visible { transform: scale(1.05); }
+.pager .prev { transform-origin: left center; }
+.pager .next { transform-origin: right center; }
+a.t { transform-origin: left center; }
+a.t:hover, a.t:focus-visible { transform: scale(1.05); }
+.g.btn { transform-origin: center; z-index: 1; }
+.g.btn:hover, .g.btn:focus-within { transform: scale(1.07); }
+.snd:hover, .snd:focus-visible { transform: scale(1.12); }
+@media (prefers-reduced-motion: reduce) { .ed-drop summary, .ed-drop summary::after { transition: none; } }
+@media (prefers-reduced-motion: reduce) { .links a, .menu, .sub-toggle, .pager a, .snd, a.t, .g.btn { transition: none; } }
+
+/* Education page: same language as the Canva pages (Anton titles, script subtitle, peach cards, coral rules) */
+.ed-hero { position: relative; padding-top: 8px; }
+.ed-hero h2 { margin: 0; font: 400 clamp(64px, 12.5vw, 132px)/.9 var(--display); text-transform: uppercase; color: var(--peach); }
+.ed-script { margin: 4px 0 0 4px; font-family: var(--script); color: var(--coral); font-size: min(76px, 9.4vw); line-height: 1.1; white-space: nowrap; transform: scaleY(1.4); transform-origin: left top; }
+.ed-label { margin: clamp(26px, 4.4vw, 46px) 0 0 4px; font: 600 clamp(16px, 2.4vw, 25px) var(--sans); letter-spacing: .12em; text-transform: uppercase; color: var(--peach); }
+.ed-spark { position: absolute; right: 2%; top: 18px; width: clamp(36px, 6vw, 60px); fill: var(--coral); }
+.ed-card { background: var(--peach); color: var(--plum); border-radius: 12px; padding: 26px 30px; box-shadow: 0 6px 16px rgba(20, 6, 14, .35); }
+.ed-degree { margin-top: 30px; }
+.ed-degree h3 { margin: 0; font: 400 clamp(30px, 4.4vw, 50px)/1 var(--display); text-transform: uppercase; color: var(--plum); text-wrap: balance; }
+.ed-meta { margin: 8px 0 0; font: 700 15px var(--sans); }
+.ed-facts { margin: 22px 0 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+.ed-facts div { border-left: 3px solid var(--coral); padding-left: 14px; min-width: 0; }
+.ed-facts dt { font: 700 11px var(--sans); letter-spacing: .16em; text-transform: uppercase; color: #a24f33; }
+.ed-facts dd { margin: 4px 0 0; font: 400 clamp(20px, 2.4vw, 28px)/1.1 var(--display); text-transform: uppercase; }
+.ed-h { margin: 52px 0 18px; display: flex; align-items: center; gap: 18px; font: 400 clamp(30px, 4.2vw, 50px)/1 var(--display); text-transform: uppercase; color: var(--peach); }
+.ed-h::after { content: ""; flex: 1; height: 3px; background: var(--coral); min-width: 40px; }
+.ed-lead { margin: -4px 0 18px; font: 600 15px/1.5 var(--sans); color: var(--peach); max-width: 62ch; }
+.ed-list { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 36px; }
+.ed-list li { display: flex; flex-direction: column; gap: 3px; padding: 14px 0; border-bottom: 2px dashed rgba(92, 55, 76, .22); min-width: 0; }
+.ed-code { font: 700 11px var(--sans); letter-spacing: .14em; text-transform: uppercase; color: #a24f33; }
+.ed-list b { font: 700 16px/1.35 var(--sans); color: var(--plum); }
+.ed-note { font: 500 13px/1.4 var(--sans); color: #7a5466; }
+.ed-certs { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.ed-certs .dw-card { aspect-ratio: 4 / 3; background: #fff; }
+.ed-certs li:nth-child(4n+1) .dw-card, .ed-certs li:nth-child(4n) .dw-card { --ox: center; }
+.ed-certs li:nth-child(3n+1) .dw-card { --ox: left; }
+.ed-certs li:nth-child(3n) .dw-card { --ox: right; }
+.ed-certs .dw-card:hover, .ed-certs .dw-card:focus-visible, .ed-certs .dw-card.pop { transform: scale(1.6); }
+.ed-cert-label { margin: 12px 0 0; display: flex; gap: 10px; align-items: flex-start; font: 700 14px/1.35 var(--sans); color: var(--peach); }
+.ed-cert-label img { width: 28px; height: 28px; border-radius: 6px; flex: none; }
+.ed-cert-label small { display: block; font: 600 12px var(--sans); letter-spacing: .1em; text-transform: uppercase; color: var(--coral); margin-top: 4px; }
+/* coursework groups and the COB 300 feature */
+.ed-drop + .ed-drop { margin-top: 12px; }
+.ed-drop summary { list-style: none; cursor: pointer; display: flex; align-items: center; gap: 14px; padding: 12px 16px; border-radius: 10px; background: rgba(92, 55, 76, .08); transition: background-color .18s, transform .18s ease; }
+.ed-drop summary::-webkit-details-marker { display: none; }
+.ed-drop summary:hover { background: rgba(255, 140, 97, .28); transform: scale(1.01); }
+.ed-drop summary:focus-visible { outline: 2px solid var(--plum); outline-offset: 3px; }
+.ed-drop summary::after { content: ""; width: 12px; height: 12px; margin-left: 4px; border-right: 3px solid var(--plum); border-bottom: 3px solid var(--plum); transform: rotate(45deg) translateY(-3px); transition: transform .2s ease; flex: none; }
+.ed-drop[open] summary::after { transform: rotate(-135deg) translateY(-3px); }
+.ed-drop[open] summary { background: rgba(255, 140, 97, .22); }
+.ed-group { flex: 1; font: 400 clamp(24px, 3vw, 32px)/1 var(--display); text-transform: uppercase; color: var(--plum); }
+.ed-drop > .ed-list, .ed-drop > .ed-feature { margin-left: 4px; margin-right: 4px; }
+.ed-drop[open] > :last-child { margin-bottom: 6px; }
+.ed-feature { margin: 16px 0 4px; background: var(--plum); color: var(--peach); border-radius: 12px; padding: 22px 24px; display: grid; gap: 20px; }
+.ed-feature-text { min-width: 0; }
+.ed-points { margin: 14px 0 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px 24px; }
+.ed-points div { border-left: 3px solid var(--coral); padding-left: 12px; min-width: 0; }
+.ed-points dt { font: 700 11px var(--sans); letter-spacing: .14em; text-transform: uppercase; color: var(--coral); }
+.ed-points dd { margin: 3px 0 0; font: 500 14px/1.45 var(--sans); color: var(--peach); }
+.ed-shots { margin: 0; }
+.ed-shots .dw-card { background: var(--peach); }
+.ed-feature.one { grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); align-items: start; }
+.ed-feature.one .ed-shots { grid-template-columns: 1fr; }
+.ed-feature.one .ed-shots .dw-card { aspect-ratio: 16 / 9; padding: 0; overflow: hidden; --ox: right; }
+.ed-feature.one .ed-shots .dw-card img { object-fit: cover; border-radius: 12px; }
+.ed-feature.one .ed-shots .dw-card:hover, .ed-feature.one .ed-shots .dw-card:focus-visible, .ed-feature.one .ed-shots .dw-card.pop { transform: scale(1.7); }
+.ed-feature .ed-code { color: var(--coral); }
+.ed-feature b { display: block; margin-top: 3px; font: 400 clamp(24px, 3vw, 32px)/1.05 var(--display); text-transform: uppercase; color: var(--peach); }
+.ed-feature p { margin: 10px 0 0; font: 500 15px/1.55 var(--sans); max-width: 70ch; }
+.ed-actions { margin-top: 18px; display: flex; flex-wrap: wrap; gap: 10px; }
+.ed-project { display: inline-block; border: 0; cursor: pointer; font: 700 14px var(--sans); letter-spacing: .04em; color: var(--plum); background: var(--peach); border-radius: 999px; padding: 10px 18px; text-decoration: none; transition: transform .18s ease, background-color .18s; }
+.ed-project:hover, .ed-project:focus-visible { transform: scale(1.05); background: var(--coral); }
+.ed-project:focus-visible { outline: 2px solid var(--peach); outline-offset: 3px; }
+@media (max-width: 860px) {
+  .ed-feature.one { grid-template-columns: 1fr; }
+  .ed-feature.one .ed-shots .dw-card { --ox: center; }
+  .ed-feature.one .ed-shots .dw-card:hover, .ed-feature.one .ed-shots .dw-card.pop { transform: scale(1.1); }
+  .ed-points { grid-template-columns: 1fr; }
+  .ed-card { padding: 22px; }
+  .ed-facts { grid-template-columns: 1fr; }
+  .ed-list { grid-template-columns: 1fr; }
+  .ed-certs { grid-template-columns: 1fr; gap: 22px; }
+  .ed-certs li .dw-card { --ox: center; }
+  .ed-certs .dw-card:hover, .ed-certs .dw-card:focus-visible, .ed-certs .dw-card.pop { transform: scale(1.15); }
+}
+.ed-verify { margin: 20px 0 0; }
+.ed-verify a { display: inline-block; font: 700 14px var(--sans); letter-spacing: .06em; color: var(--plum); background: var(--coral); border-radius: 999px; padding: 11px 20px; text-decoration: none; transition: transform .18s ease, background-color .18s; }
+.ed-verify a:hover, .ed-verify a:focus-visible { transform: scale(1.05); background: var(--plum); color: var(--peach); }
+.ed-verify a:focus-visible { outline: 2px solid var(--plum); outline-offset: 3px; }
+a.t[href^="http"] { text-decoration: underline; text-decoration-color: var(--coral); text-underline-offset: 4px; }
+
+/* concepts learned under COB 300 */
+.ed-learned { margin-top: 18px; padding-top: 16px; border-top: 2px dashed rgba(255, 140, 97, .45); }
+.ed-learned h5 { margin: 0 0 10px; font: 400 clamp(20px, 2.4vw, 26px)/1 var(--display); text-transform: uppercase; color: var(--peach); }
+.ed-learned ul { margin: 0; padding: 0; list-style: none; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px 24px; }
+.ed-learned li { position: relative; padding-left: 18px; font: 500 14px/1.45 var(--sans); color: var(--peach); }
+.ed-learned li::before { content: ""; position: absolute; left: 0; top: .62em; width: 9px; height: 3px; background: var(--coral); }
+.ed-feature.one .ed-learned { grid-column: 1 / -1; }
+.ed-ghost { background: transparent; color: var(--peach); box-shadow: inset 0 0 0 2px var(--peach); }
+.ed-ghost:hover, .ed-ghost:focus-visible { background: var(--peach); color: var(--plum); }
+@media (max-width: 860px) { .ed-learned ul { grid-template-columns: 1fr; } }
+
+/* business plan reader */
+.plan-reader { border: 0; padding: 0; margin: 0; width: 100vw; height: 100vh; max-width: 100vw; max-height: 100vh; background: #2c1a25; color: var(--peach); }
+.plan-reader::backdrop { background: rgba(20, 6, 14, .7); }
+.plan-reader[open] { display: flex; flex-direction: column; }
+.pr-bar { flex: none; display: flex; align-items: center; gap: 14px; flex-wrap: wrap; padding: max(12px, env(safe-area-inset-top, 0px)) max(16px, env(safe-area-inset-right, 0px)) 12px max(16px, env(safe-area-inset-left, 0px)); background: var(--plum); border-bottom: 2px solid var(--coral); }
+.pr-bar b { font: 400 22px/1 var(--display); text-transform: uppercase; }
+.pr-bar span { font: 600 12px var(--sans); letter-spacing: .1em; text-transform: uppercase; color: var(--coral); flex: 1; }
+.pr-close { font: 700 13px var(--sans); letter-spacing: .08em; text-transform: uppercase; color: var(--plum); background: var(--coral); border: 0; border-radius: 999px; padding: 9px 16px; cursor: pointer; transition: transform .18s ease; }
+.pr-close:hover, .pr-close:focus-visible { transform: scale(1.06); }
+.pr-close:focus-visible { outline: 2px solid var(--peach); outline-offset: 3px; }
+.pr-scroll { flex: 1; overflow: auto; padding: 24px 12px max(40px, env(safe-area-inset-bottom, 0px)); }
+.pr-page { width: 640px; margin: 0 auto; background: #fff; color: #111; box-shadow: 0 10px 40px rgba(0, 0, 0, .5); border-radius: 4px; }
+.pr-loading { padding: 40px; font: 600 15px var(--sans); color: #444; }
+.pr-pages { width: min(900px, 100%); background: transparent; box-shadow: none; display: grid; gap: 14px; }
+.pr-pages img { display: block; width: 100%; height: auto; border-radius: 4px; box-shadow: 0 10px 30px rgba(0, 0, 0, .5); background: #fff; }
+.ed-feature.one.portrait { grid-template-columns: minmax(0, 1.7fr) minmax(0, 1fr); }
+.ed-feature.one.portrait .ed-shots .dw-card { aspect-ratio: 612 / 792; }
+.ed-feature.one.portrait .ed-shots .dw-card:hover, .ed-feature.one.portrait .ed-shots .dw-card:focus-visible, .ed-feature.one.portrait .ed-shots .dw-card.pop { transform: scale(1.35); }
+.ed-feature p + p { margin-top: 12px; }
+@media (max-width: 860px) { .ed-feature.one.portrait { grid-template-columns: 1fr; } .ed-feature.one.portrait .ed-shots { max-width: 320px; } }
+.ed-open { cursor: pointer; }
+.ed-open-tag { position: absolute; left: 50%; bottom: 12px; transform: translateX(-50%); white-space: nowrap; font: 700 11px var(--sans); letter-spacing: .04em; color: var(--plum); background: var(--coral); border-radius: 999px; padding: 6px 12px; box-shadow: 0 4px 10px rgba(20, 6, 14, .35); }
+.ed-feature.one.portrait .ed-shots .ed-open:hover, .ed-feature.one.portrait .ed-shots .ed-open:focus-visible { transform: scale(1.06); }
+#designwork .dw-head { border-top: 0; padding-top: 8px; }
+
+/* open-to-work banner: on phones it becomes a normal-size card instead of shrinking with the hero */
+@media (max-width: 699px) {
+  .sec > .g.open-banner { width: auto; height: auto; margin: 0; display: flex; flex-direction: column; align-items: flex-start; gap: 12px; padding: 16px 18px; background: var(--peach); border-radius: 18px; }
+  .open-banner > .r { display: none; }
+  .open-banner > .t { position: static; width: auto; height: auto; font-size: 16px; white-space: normal; }
+  .open-banner > .g.btn { position: relative; left: auto; top: auto; width: auto; height: auto; }
+  .open-banner > .g.btn > .r, .open-banner > .g.btn > .hit { left: 0; top: 0; width: 100%; height: 100%; }
+  .open-banner > .g.btn > .t { position: relative; left: auto; top: auto; width: auto; height: auto; font-size: 16px; padding: 11px 20px; }
+}
+
+</style>
+</head>
+<body>
+<header class="site">
+  <nav class="bar" aria-label="Main">
+    <a class="brand" href="#home">Lindsay Marshall</a>
+    <button class="menu" type="button" id="menu-btn" aria-expanded="false" aria-controls="menu">
+      <span class="burger" aria-hidden="true"></span><span class="menu-label">Menu</span>
+    </button>
+    <ul class="links" id="menu">
+      <li><a href="#home" data-sec="home">Home</a></li>
+      <li><a href="#about" data-sec="about">About</a></li>
+      <li><a href="#education" data-sec="education">Education</a></li>
+      <li><a href="#skills" data-sec="skills">Skills</a></li>
+      <li><a href="#designwork" data-sec="designwork">Design Work</a></li>
+      <li class="has-sub">
+        <a href="#experience" data-sec="experience fiveguys gravity chbs cardinals doordash">Experience</a>
+        <button class="sub-toggle" type="button" id="sub-btn" aria-expanded="false" aria-controls="exp-menu" aria-label="Show work experience"><span aria-hidden="true">&#9662;</span></button>
+        <ul class="sub" id="exp-menu">
+          <li><a href="#fiveguys">Five Guys <span>Marketing Intern</span></a></li>
+          <li><a href="#gravity">Gravity Group <span>Graphic Design Intern</span></a></li>
+          <li><a href="#chbs">JMU CHBS <span>Social Media Intern</span></a></li>
+          <li><a href="#cardinals">Front Royal Cardinals <span>Social Media Intern</span></a></li>
+          <li><a href="#doordash">DoorDash <span>Campus Ambassador</span></a></li>
+        </ul>
+      </li>
+      <li><a href="#photography" data-sec="photography">Photography</a></li>
+      <li><a class="cta" href="#contact" data-sec="contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+<main class="page">
+<section id="top" class="sec" style="--sh:640"><div class="im decor" style="--x:0;--y:23;--w:55;--h:51"><img src="a/77256c7e.png" alt="" loading="lazy" style="left:0.000%;top:0.000%;width:100.000%;height:100.000%"></div><div class="t dsp" id="t-marketing" style="--x:34;--y:58;--w:607;--h:148;--fs:137.96"><span class="in"><span class="ln">MARKETING</span></span></div><div class="t dsp" id="t-portfolio" style="--x:34;--y:206;--w:607;--h:163;--fs:152.37"><span class="in"><span class="ln">PORTFOLIO</span></span></div><div class="r decor" style="--x:34;--y:366;--w:582;--h:3;background:#ff8c61"></div><div class="t scr c" id="t-lindsay-marshall" style="--x:-152;--y:391;--w:942;--h:121;--fs:94.94"><span class="in"><span class="ln">Lindsay Marshall</span></span></div><div class="im decor" style="--x:601;--y:498;--w:55;--h:51"><img src="a/77256c7e.png" alt="" loading="lazy" style="left:0.000%;top:0.000%;width:100.000%;height:100.000%"></div><div class="g open-banner" style="--x:34;--y:552;--w:690;--h:60;--gw:690;--gh:60"><div class="r " style="--x:0;--y:0;--w:690;--h:60;background:#ffd3b8;border-radius:999px;box-shadow:0 calc(4*var(--u)) calc(14*var(--u)) rgba(20,6,14,.35)"></div><div class="t mont" id="open-text" style="--x:28;--y:0;--w:440;--h:60;--fs:19.00;color:#5c374c;font-weight:700"><span class="in"><span class="ln">Graduating May 2027 · Open to marketing roles</span></span></div><div class="g btn" style="--x:506;--y:8;--w:176;--h:44;--gw:176;--gh:44"><div class="r " style="--x:0;--y:0;--w:176;--h:44;background:#ff8c61;border-radius:999px"></div><div class="t mont c" id="open-cta" style="--x:0;--y:0;--w:176;--h:44;--fs:17.00;color:#5c374c;font-weight:700"><span class="in"><span class="ln">Let’s talk →</span></span></div><a class="hit" href="#contact" aria-label="Contact Lindsay" style="--x:0;--y:0;--w:176;--h:44"></a></div></div><div class="r decor" style="--x:527;--y:446;--w:478;--h:148;background:radial-gradient(closest-side,rgba(20,6,14,.28),rgba(20,6,14,0));"></div><div class="g " style="--x:656;--y:48;--w:325;--h:476;--gw:325;--gh:476"><div class="r " style="--x:15;--y:20;--w:310;--h:456;border:calc(3*var(--u)) solid #ff8c61"></div><div class="g  clip" style="--x:0;--y:0;--w:311;--h:456;--gw:311;--gh:456"><div class="im " style="--x:0;--y:0;--w:311;--h:456"><img src="a/283b1529.jpg" alt="" loading="lazy" style="left:-12.219%;top:-31.798%;width:137.621%;height:137.719%"></div><div class="im " style="--x:0;--y:0;--w:311;--h:456"><img src="a/9d5ee415.png" alt="Lindsay Marshall" loading="lazy" style="left:-12.219%;top:-31.798%;width:137.621%;height:137.719%"></div><div class="r " style="--x:0;--y:0;--w:311;--h:456;border:calc(3*var(--u)) solid #ffd3b8"></div></div></div></section>
+<section id="contents" class="sec" style="--sh:576"><div class="t scr c" id="t-take-a-look" style="--x:-275;--y:64;--w:926;--h:117;--fs:75.15;transform:rotate(-10deg)"><span class="in"><span class="ln">Take a look</span></span></div><div class="t dsp  pitch" id="t-table-of-contents" style="--x:10;--y:188;--w:512;--h:250;--fs:117.10;--lh:118"><span class="in"><span class="ln">TABLE OF</span><span class="ln">CONTENTS</span></span></div><div class="g " style="--x:424;--y:16;--w:577;--h:550;--gw:577;--gh:550"><div class="r " style="--x:17;--y:14;--w:550;--h:518;border:calc(3*var(--u)) solid #ff8c61"></div><div class="r " style="--x:0;--y:0;--w:34;--h:34;border:calc(3*var(--u)) solid #ff8c61;background:#5c374c"></div><div class="r " style="--x:542;--y:515;--w:34;--h:34;border:calc(3*var(--u)) solid #ff8c61;background:#5c374c"></div><div class="t mont c" id="t-1" style="--x:38;--y:11;--w:36;--h:64;--fs:37.00;color:#f6f5f0;font-weight:700"><span class="in"><span class="ln">1</span></span></div><a class="t mont" id="toc-about" href="#about" style="--x:83;--y:28;--w:330;--h:30;--fs:32.73;color:#f6f5f0;font-weight:700"><span class="in"><span class="ln">ABOUT</span></span></a><div class="t mont c" id="t-2" style="--x:38;--y:59;--w:36;--h:64;--fs:37.00;color:#f6f5f0;font-weight:700"><span class="in"><span class="ln">2</span></span></div><a class="t mont" id="edu" href="#education" style="--x:83;--y:76;--w:330;--h:30;--fs:32.73;color:#f6f5f0;font-weight:700"><span class="in"><span class="ln">EDUCATION</span></span></a><div class="t mont c" id="t-3" style="--x:38;--y:107;--w:36;--h:64;--fs:37.00;color:#f6f5f0;font-weight:700"><span class="in"><span class="ln">3</span></span></div><a class="t mont" id="toc-skills" href="#skills" style="--x:83;--y:124;--w:330;--h:30;--fs:32.73;color:#f6f5f0;font-weight:700"><span class="in"><span class="ln">SKILLS</span></span></a><div class="t mont c" id="t-4" style="--x:38;--y:155;--w:36;--h:64;--fs:37.00;color:#f6f5f0;font-weight:700"><span class="in"><span class="ln">4</span></span></div><a class="t mont" id="toc-design work" href="#designwork" style="--x:83;--y:172;--w:330;--h:30;--fs:32.73;color:#f6f5f0;font-weight:700"><span class="in"><span class="ln">DESIGN WORK</span></span></a><div class="t mont c" id="t-5" style="--x:38;--y:203;--w:36;--h:64;--fs:37.00;color:#f6f5f0;font-weight:700"><span class="in"><span class="ln">5</span></span></div><a class="t mont" id="toc-experience" href="#experience" style="--x:83;--y:220;--w:330;--h:30;--fs:32.73;color:#f6f5f0;font-weight:700"><span class="in"><span class="ln">EXPERIENCE</span></span></a><div class="t mont c" id="t-6" style="--x:38;--y:427;--w:36;--h:64;--fs:37.00;color:#f6f5f0;font-weight:700"><span class="in"><span class="ln">6</span></span></div><a class="t mont" id="toc-photography" href="#photography" style="--x:83;--y:444;--w:330;--h:30;--fs:32.73;color:#f6f5f0;font-weight:700"><span class="in"><span class="ln">PHOTOGRAPHY</span></span></a><div class="t mont c" id="t-7" style="--x:38;--y:475;--w:36;--h:64;--fs:37.00;color:#f6f5f0;font-weight:700"><span class="in"><span class="ln">7</span></span></div><a class="t mont" id="toc-contact" href="#contact" style="--x:83;--y:492;--w:330;--h:30;--fs:32.73;color:#f6f5f0;font-weight:700"><span class="in"><span class="ln">CONTACT</span></span></a><a class="t mont" id="sub" href="#fiveguys" style="--x:83;--y:260;--w:480;--h:30;--fs:17.00;color:#f6f5f0;letter-spacing:.09em;font-weight:700"><span class="in"><span class="ln">FIVE GUYS – MARKETING INTERN</span></span></a><a class="t mont" id="toc-sub-1" href="#gravity" style="--x:83;--y:294;--w:480;--h:30;--fs:17.00;color:#f6f5f0;letter-spacing:.09em;font-weight:700"><span class="in"><span class="ln">GRAVITY GROUP – GRAPHIC DESIGN INTERN</span></span></a><a class="t mont" id="toc-sub-2" href="#chbs" style="--x:83;--y:328;--w:480;--h:30;--fs:17.00;color:#f6f5f0;letter-spacing:.09em;font-weight:700"><span class="in"><span class="ln">JMU CHBS – SOCIAL MEDIA INTERN</span></span></a><a class="t mont" id="toc-sub-3" href="#cardinals" style="--x:83;--y:362;--w:480;--h:30;--fs:17.00;color:#f6f5f0;letter-spacing:.09em;font-weight:700"><span class="in"><span class="ln">FR CARDINALS – SOCIAL MEDIA INTERN</span></span></a><a class="t mont" id="toc-sub-4" href="#doordash" style="--x:83;--y:396;--w:480;--h:30;--fs:17.00;color:#f6f5f0;letter-spacing:.09em;font-weight:700"><span class="in"><span class="ln">DOORDASH – CAMPUS AMBASSADOR</span></span></a></div></section>
+<section id="about" class="sec" style="--sh:753"><div class="t hand" id="t-hi-i-m" style="--x:29;--y:32;--w:257;--h:118;--fs:88.92"><span class="in"><span class="ln">Hi, I’m</span></span></div><div class="im decor" style="--x:231;--y:98;--w:55;--h:51"><img src="a/77256c7e.png" alt="" loading="lazy" style="left:0.000%;top:0.000%;width:100.000%;height:100.000%"></div><div class="t dsp" id="t-lindsay" style="--x:19;--y:142;--w:950;--h:122;--fs:126.63"><span class="in"><span class="ln">Lindsay</span></span></div><div class="t dsp" id="t-marshall" style="--x:19;--y:265;--w:950;--h:122;--fs:117.66"><span class="in"><span class="ln">Marshall</span></span></div><div class="g  clip" style="--x:552;--y:0;--w:472;--h:381;--gw:472;--gh:381"><div class="im " style="--x:-153;--y:-158;--w:828;--h:562"><img src="a/f74199b3-denim.png" alt="Lindsay sitting outdoors" loading="lazy" style="left:0.000%;top:0.000%;width:100.000%;height:100.000%"></div><div class="r " style="--x:0;--y:361;--w:472;--h:20;background:#ff8c61"></div></div><div class="t bod  pitch" id="t-my-experience-with-marketing-has" style="--x:29;--y:406;--w:450;--h:330;--fs:21.85;--lh:30"><span class="in"><span class="ln">My experience with marketing has</span><span class="ln">led me to discover a passion for</span><span class="ln">both creative design and the</span><span class="ln">planning that brings ideas to life. As</span><span class="ln">a Marketing major at James</span><span class="ln">Madison University, I’ve explored</span><span class="ln">these interests through internships</span><span class="ln">at Five Guys and Gravity Group,</span><span class="ln">gaining experience in marketing</span><span class="ln">strategy, graphic design, and</span><span class="ln">collaboration across teams.</span></span></div><div class="t bod  pitch" id="t-i-enjoy-asking-questions-finding" style="--x:570;--y:406;--w:454;--h:330;--fs:21.87;--lh:30"><span class="in"><span class="ln">I enjoy asking questions, finding</span><span class="ln">ways to improve a process, and</span><span class="ln">turning ideas into clear next steps.</span><span class="ln">Whether I’m designing content or</span><span class="ln">helping organize a campaign, I bring</span><span class="ln">curiosity, initiative, and a willingness</span><span class="ln">to learn. As I prepare to graduate in</span><span class="ln">May 2027, I’m looking for a team</span><span class="ln">where I can contribute creatively,</span><span class="ln">take on new challenges, and continue</span><span class="ln">growing as a marketer.</span></span></div></section>
+<section id="skills" class="sec" style="--sh:927"><div class="t dsp" id="t-skills-expertise" style="--x:14;--y:10;--w:878;--h:118;--fs:99.07"><span class="in"><span class="ln">SKILLS &amp; EXPERTISE</span></span></div><div class="im decor" style="--x:730;--y:0;--w:65;--h:62"><img src="a/77256c7e.png" alt="" loading="lazy" style="left:0.000%;top:0.000%;width:100.000%;height:100.000%"></div><div class="row" style="--cols:1"><div class="g " style="--x:7;--y:144;--w:329;--h:575;--gw:329;--gh:575"><div class="r " style="--x:0;--y:0;--w:329;--h:575;background:#ffd3b8;border-radius:calc(10*var(--u));box-shadow:0 calc(4*var(--u)) calc(12*var(--u)) rgba(30,10,22,.35)"></div><div class="t dsp" id="t-design-content" style="--x:7;--y:32;--w:322;--h:54;--fs:45.06;color:#5c374c"><span class="in"><span class="ln">DESIGN &amp; CONTENT</span></span></div><div class="im " style="--x:2;--y:104.5;--w:106;--h:103;transform:scale(0.78)"><img src="a/777228a8.png" alt="Photoshop" loading="lazy" style="left:0.000%;top:0.000%;width:100.000%;height:100.000%"></div><div class="im " style="--x:112;--y:104.5;--w:105;--h:103;transform:scale(0.79)"><img src="a/3b2ac8ab.png" alt="Illustrator" loading="lazy" style="left:0.000%;top:0.000%;width:100.000%;height:100.000%"></div><div class="im " style="--x:233;--y:116;--w:82;--h:80"><img src="w/icon-id.png" alt="InDesign" loading="lazy" style="left:0.000%;top:0.000%;width:100.000%;height:100.000%"></div><div class="im " style="--x:0.5;--y:241.5;--w:109;--h:109;transform:scale(0.76)"><img src="a/450a4b29.png" alt="Lightroom" loading="lazy" style="left:0.000%;top:0.000%;width:100.000%;height:100.000%"></div><div class="im " style="--x:110;--y:241.5;--w:109;--h:109;transform:scale(0.76)"><img src="a/cc4267e1.png" alt="Premiere Pro" loading="lazy" style="left:0.000%;top:0.000%;width:100.000%;height:100.000%"></div><div class="im " style="--x:214.5;--y:209.5;--w:131;--h:173;transform:scale(0.71)"><img src="a/c40fb316.png" alt="Canva" loading="lazy" style="left:-20.611%;top:0.000%;width:132.061%;height:100.000%"></div><div class="im " style="--x:55;--y:381.5;--w:109;--h:109;transform:scale(0.76)"><img src="a/11771433.png" alt="Figma" loading="lazy" style="left:0.000%;top:0.000%;width:100.000%;height:100.000%"></div><div class="im " style="--x:174;--y:390.5;--w:91;--h:91;transform:scale(0.9)"><img src="a/1872f736.jpg" alt="Meta Business Suite" loading="lazy" style="left:0.000%;top:0.000%;width:100.000%;height:100.000%"></div><a class="hit" href="#ps-work" aria-label="See Photoshop work" style="--x:13;--y:114;--w:84;--h:112"></a><a class="hit" href="#ai-work" aria-label="See Illustrator work" style="--x:122.5;--y:114;--w:84;--h:112"></a><a class="hit" href="#id-work" aria-label="See InDesign work" style="--x:232;--y:114;--w:84;--h:112"></a><div class="t lab c" id="t-photoshop" style="--x:0;--y:200;--w:110;--h:22;--fs:16.34;color:#5c374c"><span class="in"><span class="ln">Photoshop</span></span></div><div class="t lab c" id="t-illustrator" style="--x:109.5;--y:200;--w:110;--h:22;--fs:16.34;color:#5c374c"><span class="in"><span class="ln">Illustrator</span></span></div><div class="t lab c" id="t-indesign" style="--x:219;--y:200;--w:110;--h:22;--fs:16.34;color:#5c374c"><span class="in"><span class="ln">InDesign</span></span></div><div class="t lab c" id="lr" style="--x:0;--y:340;--w:110;--h:22;--fs:16.34;color:#5c374c"><span class="in"><span class="ln">Lightroom</span></span></div><div class="t lab c" id="t-premiere" style="--x:109.5;--y:340;--w:110;--h:22;--fs:16.34;color:#5c374c"><span class="in"><span class="ln">Premiere</span></span></div><div class="t lab c" id="t-canva" style="--x:219;--y:340;--w:110;--h:22;--fs:16.34;color:#5c374c"><span class="in"><span class="ln">Canva</span></span></div><div class="t lab c" id="t-figma" style="--x:54.5;--y:480;--w:110;--h:22;--fs:16.34;color:#5c374c"><span class="in"><span class="ln">Figma</span></span></div><div class="t lab c pitch" id="t-meta-business-suite" style="--x:159.5;--y:480;--w:120;--h:40;--fs:16.34;color:#5c374c;--lh:18"><span class="in"><span class="ln">Meta Business</span><span class="ln">Suite</span></span></div></div><div class="g " style="--x:347;--y:144;--w:329;--h:407;--gw:329;--gh:407"><div class="r " style="--x:0;--y:0;--w:329;--h:407;background:#ffd3b8;border-radius:calc(10*var(--u));box-shadow:0 calc(4*var(--u)) calc(12*var(--u)) rgba(30,10,22,.35)"></div><div class="t dsp" id="t-collaboration" style="--x:4;--y:32;--w:322;--h:54;--fs:45.30;color:#5c374c"><span class="in"><span class="ln">COLLABORATION</span></span></div><div class="im " style="--x:19;--y:92;--w:111;--h:108"><img src="a/81671a9e.png" alt="Microsoft Teams" loading="lazy" style="left:-85.586%;top:-26.852%;width:274.775%;height:147.222%"></div><div class="im " style="--x:164;--y:86;--w:127;--h:130"><img src="a/a7370f9d.png" alt="Slack" loading="lazy" style="left:-100.000%;top:-30.000%;width:300.000%;height:153.846%"></div><div class="r tile" role="img" aria-label="Claude" style="--x:32.5;--y:252;--w:82;--h:82;background:no-repeat center/100% 100% url('data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%270%200%20100%20100%27%3E%3Crect%20width%3D%27100%27%20height%3D%27100%27%20rx%3D%2722%27%20fill%3D%27%23D97757%27/%3E%3Cg%20stroke%3D%27white%27%20stroke-width%3D%277%27%20stroke-linecap%3D%27round%27%3E%3Cline%20x1%3D%2750%27%20y1%3D%2750%27%20x2%3D%2780.0%27%20y2%3D%2750.0%27/%3E%3Cline%20x1%3D%2750%27%20y1%3D%2750%27%20x2%3D%2769.1%27%20y2%3D%2761.0%27/%3E%3Cline%20x1%3D%2750%27%20y1%3D%2750%27%20x2%3D%2765.0%27%20y2%3D%2776.0%27/%3E%3Cline%20x1%3D%2750%27%20y1%3D%2750%27%20x2%3D%2750.0%27%20y2%3D%2772.0%27/%3E%3Cline%20x1%3D%2750%27%20y1%3D%2750%27%20x2%3D%2735.0%27%20y2%3D%2776.0%27/%3E%3Cline%20x1%3D%2750%27%20y1%3D%2750%27%20x2%3D%2730.9%27%20y2%3D%2761.0%27/%3E%3Cline%20x1%3D%2750%27%20y1%3D%2750%27%20x2%3D%2720.0%27%20y2%3D%2750.0%27/%3E%3Cline%20x1%3D%2750%27%20y1%3D%2750%27%20x2%3D%2730.9%27%20y2%3D%2739.0%27/%3E%3Cline%20x1%3D%2750%27%20y1%3D%2750%27%20x2%3D%2735.0%27%20y2%3D%2724.0%27/%3E%3Cline%20x1%3D%2750%27%20y1%3D%2750%27%20x2%3D%2750.0%27%20y2%3D%2728.0%27/%3E%3Cline%20x1%3D%2750%27%20y1%3D%2750%27%20x2%3D%2765.0%27%20y2%3D%2724.0%27/%3E%3Cline%20x1%3D%2750%27%20y1%3D%2750%27%20x2%3D%2769.1%27%20y2%3D%2739.0%27/%3E%3C/g%3E%3C/svg%3E')"></div><div class="im " style="--x:182;--y:253;--w:94;--h:94"><img src="a/a13fc2e4.png" alt="Trello" loading="lazy" style="left:0.000%;top:0.000%;width:100.000%;height:100.000%"></div><div class="t lab c" id="t-teams" style="--x:25;--y:198;--w:97;--h:24;--fs:16.70;color:#5c374c"><span class="in"><span class="ln">Teams</span></span></div><div class="t lab c" id="t-slack" style="--x:175;--y:210;--w:107;--h:24;--fs:16.49;color:#5c374c"><span class="in"><span class="ln">Slack</span></span></div><div class="t lab c" id="t-claude" style="--x:25;--y:346;--w:97;--h:24;--fs:16.34;color:#5c374c"><span class="in"><span class="ln">Claude</span></span></div><div class="t lab c" id="t-trello" style="--x:187;--y:353;--w:81;--h:24;--fs:16.84;color:#5c374c"><span class="in"><span class="ln">Trello</span></span></div></div><div class="g " style="--x:348;--y:564;--w:329;--h:349;--gw:329;--gh:349"><div class="r " style="--x:0;--y:0;--w:329;--h:349;background:#ffd3b8;border-radius:calc(10*var(--u));box-shadow:0 calc(4*var(--u)) calc(12*var(--u)) rgba(30,10,22,.35)"></div><div class="t dsp" id="t-social-platforms" style="--x:5;--y:21;--w:320;--h:54;--fs:45.24;color:#5c374c"><span class="in"><span class="ln">SOCIAL PLATFORMS</span></span></div><div class="im " style="--x:30;--y:80;--w:84;--h:84"><img src="a/2285537e.png" alt="Instagram" loading="lazy" style="left:0.000%;top:0.000%;width:100.000%;height:100.000%"></div><div class="im " style="--x:181;--y:80;--w:89;--h:89"><img src="a/6c90e799.png" alt="Facebook" loading="lazy" style="left:0.000%;top:0.000%;width:100.000%;height:100.000%"></div><div class="im " style="--x:10;--y:205;--w:129;--h:107"><img src="a/80a132ff.png" alt="TikTok" loading="lazy" style="left:0.000%;top:0.000%;width:100.000%;height:100.000%"></div><div class="im " style="--x:95;--y:182;--w:234;--h:147"><img src="a/77b25e97.png" alt="X" loading="lazy" style="left:0.000%;top:0.000%;width:111.538%;height:100.000%"></div><div class="t lab c" id="t-instagram" style="--x:18;--y:173;--w:113;--h:28;--fs:19.67;color:#5c374c"><span class="in"><span class="ln">Instagram</span></span></div><div class="t lab c" id="t-facebook" style="--x:183;--y:175;--w:93;--h:28;--fs:18.81;color:#5c374c"><span class="in"><span class="ln">Facebook</span></span></div><div class="t lab c" id="t-tiktok" style="--x:18;--y:310;--w:113;--h:28;--fs:18.93;color:#5c374c"><span class="in"><span class="ln">TikTok</span></span></div><div class="t lab c" id="t-x" style="--x:170;--y:310;--w:113;--h:28;--fs:18.41;color:#5c374c"><span class="in"><span class="ln">X</span></span></div></div><div class="g " style="--x:689;--y:144;--w:329;--h:575;--gw:329;--gh:575"><div class="r " style="--x:0;--y:0;--w:329;--h:575;background:#ffd3b8;border-radius:calc(10*var(--u));box-shadow:0 calc(4*var(--u)) calc(12*var(--u)) rgba(30,10,22,.35)"></div><div class="t dsp" id="data" style="--x:9;--y:20;--w:320;--h:47;--fs:47.90;color:#5c374c"><span class="in"><span class="ln">DATA &amp;</span></span></div><div class="t dsp" id="t-presentation" style="--x:9;--y:67;--w:320;--h:47;--fs:47.90;color:#5c374c"><span class="in"><span class="ln">PRESENTATION</span></span></div><div class="im " style="--x:38;--y:124;--w:106;--h:106"><img src="a/1e55954e.png" alt="Python" loading="lazy" style="left:0.000%;top:0.000%;width:100.000%;height:100.000%"></div><div class="im " style="--x:193;--y:117;--w:116;--h:111"><img src="a/d968b47c.png" alt="Excel" loading="lazy" style="left:-27.586%;top:-18.018%;width:142.241%;height:148.649%"></div><div class="im " style="--x:42;--y:270;--w:103;--h:103"><img src="a/e30f316a.png" alt="PowerPoint" loading="lazy" style="left:-66.019%;top:-3.883%;width:231.068%;height:115.534%"></div><div class="im " style="--x:190;--y:265;--w:108;--h:116"><img src="a/b77908e6.png" alt="SQL" loading="lazy" style="left:0.000%;top:0.000%;width:100.000%;height:100.000%"></div><div class="im " style="--x:55;--y:408;--w:85;--h:93"><img src="a/a578fdd2.jpg" alt="Power BI" loading="lazy" style="left:-48.235%;top:0.000%;width:195.294%;height:100.000%"></div><div class="t lab c" id="t-python" style="--x:51;--y:238;--w:81;--h:24;--fs:17.12;color:#5c374c"><span class="in"><span class="ln">Python</span></span></div><div class="t lab c" id="t-excel" style="--x:203;--y:238;--w:81;--h:24;--fs:16.22;color:#5c374c"><span class="in"><span class="ln">Excel</span></span></div><div class="t lab c" id="t-powerpoint" style="--x:46;--y:381;--w:102;--h:24;--fs:16.80;color:#5c374c"><span class="in"><span class="ln">PowerPoint</span></span></div><div class="t lab c" id="t-sql" style="--x:204;--y:385;--w:81;--h:24;--fs:15.51;color:#5c374c"><span class="in"><span class="ln">SQL</span></span></div><div class="t lab c" id="t-power-bi" style="--x:55;--y:507;--w:102;--h:24;--fs:16.26;color:#5c374c"><span class="in"><span class="ln">Power BI</span></span></div><div class="r tile" role="img" aria-label="HubSpot" style="--x:202;--y:412;--w:84;--h:84;background:no-repeat center/100% 100% url('data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%270%200%20100%20100%27%3E%3Crect%20width%3D%27100%27%20height%3D%27100%27%20rx%3D%2722%27%20fill%3D%27%23FF7A59%27/%3E%3Cg%20fill%3D%27none%27%20stroke%3D%27white%27%20stroke-width%3D%277%27%20stroke-linecap%3D%27round%27%3E%3Ccircle%20cx%3D%2756%27%20cy%3D%2758%27%20r%3D%2715%27/%3E%3Cline%20x1%3D%2756%27%20y1%3D%2743%27%20x2%3D%2756%27%20y2%3D%2724%27/%3E%3Cline%20x1%3D%2743%27%20y1%3D%2766%27%20x2%3D%2727%27%20y2%3D%2776%27/%3E%3Cline%20x1%3D%2745%27%20y1%3D%2748%27%20x2%3D%2730%27%20y2%3D%2736%27/%3E%3C/g%3E%3Cg%20fill%3D%27white%27%3E%3Ccircle%20cx%3D%2756%27%20cy%3D%2721%27%20r%3D%276%27/%3E%3Ccircle%20cx%3D%2724%27%20cy%3D%2778%27%20r%3D%276%27/%3E%3Ccircle%20cx%3D%2727%27%20cy%3D%2733%27%20r%3D%275%27/%3E%3C/g%3E%3C/svg%3E')"></div><div class="t lab c" id="t-hubspot" style="--x:193;--y:507;--w:102;--h:24;--fs:16.34;color:#5c374c"><span class="in"><span class="ln">HubSpot</span></span></div></div></div></section>
+<section id="experience" class="sec" style="--sh:1223"><div class="t dsp c" id="t-work-experience" style="--x:79;--y:53;--w:878;--h:118;--fs:103.08"><span class="in"><span class="ln">WORK EXPERIENCE</span></span></div><div class="t scr c" id="t-where-i-have-made-an-impact" style="--x:39;--y:162;--w:941;--h:99;--fs:84.02"><span class="in"><span class="ln">Where I have made an impact</span></span></div><div class="g " style="--x:15;--y:280;--w:320;--h:420;--gw:320;--gh:420"><div class="r " style="--x:29;--y:9;--w:247;--h:247;background:#ffd3b8;border-radius:50%;box-shadow:0 0 0 calc(5*var(--u)) #ff8c61"></div><div class="im " style="--x:78;--y:18;--w:153;--h:196"><img src="a/6836c0dc.png" alt="Five Guys logo" loading="lazy" style="left:0.000%;top:0.000%;width:228.105%;height:100.000%"></div><div class="im " style="--x:60;--y:64;--w:185;--h:192"><img src="a/6836c0dc.png" alt="" loading="lazy" style="left:-89.189%;top:-1.042%;width:189.189%;height:102.604%"></div><div class="t dsp c" id="t-five-guys" style="--x:10;--y:269;--w:300;--h:54;--fs:45.47"><span class="in"><span class="ln">FIVE GUYS</span></span></div><div class="t mont c" id="t-marketing-intern" style="--x:10;--y:321;--w:301;--h:31;--fs:23.07;font-weight:600"><span class="in"><span class="ln">Marketing Intern</span></span></div><div class="g btn" style="--x:42;--y:361;--w:238;--h:52;--gw:238;--gh:52"><div class="r " style="--x:0;--y:0;--w:238;--h:52;background:#ff8c61;border-radius:999px"></div><div class="t mont" id="explore" style="--x:14;--y:7;--w:125;--h:38;--fs:27.53;color:#5c374c;font-weight:700"><span class="in"><span class="ln">Explore</span></span></div><div class="r arrow" style="--x:146;--y:26;--w:70;--h:5;"></div><a class="hit" href="#fiveguys" aria-label="Explore Five Guys" style="--x:0;--y:0;--w:238;--h:52"></a></div></div><div class="g " style="--x:350;--y:250;--w:320;--h:450;--gw:320;--gh:450"><div class="r " style="--x:32.5;--y:39.5;--w:247;--h:247;background:#ffd3b8;border-radius:50%;box-shadow:0 0 0 calc(5*var(--u)) #ff8c61"></div><div class="im " style="--x:47;--y:58;--w:217;--h:218"><img src="a/5f08a257.png" alt="Gravity Group logo" loading="lazy" style="left:0.000%;top:0.000%;width:100.000%;height:100.000%"></div><div class="t dsp c" id="t-gravity-group" style="--x:9;--y:299;--w:300;--h:54;--fs:45.61"><span class="in"><span class="ln">GRAVITY GROUP</span></span></div><div class="t mont c" id="t-graphic-design-intern" style="--x:9;--y:351;--w:301;--h:31;--fs:22.98;font-weight:600"><span class="in"><span class="ln">Graphic Design Intern</span></span></div><div class="g btn" style="--x:45;--y:391;--w:238;--h:52;--gw:238;--gh:52"><div class="r " style="--x:0;--y:0;--w:238;--h:52;background:#ff8c61;border-radius:999px"></div><div class="t mont" id="t-explore" style="--x:15;--y:7;--w:125;--h:38;--fs:27.53;color:#5c374c;font-weight:700"><span class="in"><span class="ln">Explore</span></span></div><div class="r arrow" style="--x:146;--y:26;--w:70;--h:5;"></div><a class="hit" href="#gravity" aria-label="Explore Gravity Group" style="--x:0;--y:0;--w:238;--h:52"></a></div></div><div class="g " style="--x:686;--y:280;--w:320;--h:420;--gw:320;--gh:420"><div class="r " style="--x:36;--y:9;--w:247;--h:247;background:#ffd3b8;border-radius:50%;box-shadow:0 0 0 calc(5*var(--u)) #ff8c61"></div><div class="im " style="--x:51;--y:91;--w:222;--h:84"><img src="a/7e8f6928.png" alt="JMU College of Health and Behavioral Studies logo" loading="lazy" style="left:0.000%;top:0.000%;width:100.000%;height:100.000%"></div><div class="t dsp c" id="t-jmu-chbs" style="--x:10;--y:269;--w:300;--h:54;--fs:45.39"><span class="in"><span class="ln">JMU CHBS</span></span></div><div class="t mont c" id="t-social-media-intern" style="--x:18;--y:321;--w:301;--h:31;--fs:22.98;font-weight:600"><span class="in"><span class="ln">Social Media Intern</span></span></div><div class="g btn" style="--x:50;--y:361;--w:238;--h:52;--gw:238;--gh:52"><div class="r " style="--x:0;--y:0;--w:238;--h:52;background:#ff8c61;border-radius:999px"></div><div class="t mont" id="t-explore-2" style="--x:15;--y:7;--w:125;--h:38;--fs:27.53;color:#5c374c;font-weight:700"><span class="in"><span class="ln">Explore</span></span></div><div class="r arrow" style="--x:146;--y:26;--w:70;--h:5;"></div><a class="hit" href="#chbs" aria-label="Explore JMU CHBS" style="--x:0;--y:0;--w:238;--h:52"></a></div></div><div class="g " style="--x:185;--y:748;--w:320;--h:420;--gw:320;--gh:420"><div class="r " style="--x:29;--y:10;--w:247;--h:247;background:#ffd3b8;border-radius:50%;box-shadow:0 0 0 calc(5*var(--u)) #ff8c61"></div><div class="im " style="--x:43;--y:24;--w:218;--h:218"><img src="a/295d55e9.png" alt="Front Royal Cardinals logo" loading="lazy" style="left:0.000%;top:0.000%;width:100.000%;height:100.000%"></div><div class="t dsp c" id="t-fr-cardinals" style="--x:10;--y:269;--w:300;--h:54;--fs:45.42"><span class="in"><span class="ln">FR CARDINALS</span></span></div><div class="t mont c" id="t-social-media-intern-2" style="--x:9;--y:321;--w:301;--h:31;--fs:22.98;font-weight:600"><span class="in"><span class="ln">Social Media Intern</span></span></div><div class="g btn" style="--x:41;--y:361;--w:238;--h:52;--gw:238;--gh:52"><div class="r " style="--x:0;--y:0;--w:238;--h:52;background:#ff8c61;border-radius:999px"></div><div class="t mont" id="t-explore-3" style="--x:15;--y:8;--w:125;--h:38;--fs:27.53;color:#5c374c;font-weight:700"><span class="in"><span class="ln">Explore</span></span></div><div class="r arrow" style="--x:146;--y:27;--w:70;--h:5;"></div><a class="hit" href="#cardinals" aria-label="Explore Front Royal Cardinals" style="--x:0;--y:0;--w:238;--h:52"></a></div></div><div class="g " style="--x:520;--y:718;--w:320;--h:450;--gw:320;--gh:450"><div class="r " style="--x:31.5;--y:39.5;--w:247;--h:247;background:#ffd3b8;border-radius:50%;box-shadow:0 0 0 calc(5*var(--u)) #ff8c61"></div><div class="im " style="--x:32;--y:38;--w:250;--h:250"><img src="a/1883824b.png" alt="DoorDash logo" loading="lazy" style="left:0.000%;top:0.000%;width:100.000%;height:100.000%"></div><div class="t dsp c" id="t-doordash" style="--x:10;--y:299;--w:300;--h:54;--fs:45.34"><span class="in"><span class="ln">DOORDASH</span></span></div><div class="t mont c" id="t-campus-ambassador" style="--x:9;--y:351;--w:301;--h:31;--fs:23.43;font-weight:600"><span class="in"><span class="ln">Campus Ambassador</span></span></div><div class="g btn" style="--x:45;--y:391;--w:238;--h:52;--gw:238;--gh:52"><div class="r " style="--x:0;--y:0;--w:238;--h:52;background:#ff8c61;border-radius:999px"></div><div class="t mont" id="t-explore-4" style="--x:14;--y:8;--w:125;--h:38;--fs:27.53;color:#5c374c;font-weight:700"><span class="in"><span class="ln">Explore</span></span></div><div class="r arrow" style="--x:146;--y:27;--w:70;--h:5;"></div><a class="hit" href="#doordash" aria-label="Explore DoorDash" style="--x:0;--y:0;--w:238;--h:52"></a></div></div></section>
+<section id="fiveguys" class="sec" style="--sh:2463"><div class="t dsp" id="t-five-guys-2" style="--x:43;--y:51;--w:878;--h:118;--fs:105.63"><span class="in"><span class="ln">FIVE GUYS</span></span></div><div class="t scr c" id="t-marketing-2" style="--x:-298;--y:157;--w:941;--h:93;--fs:75.88"><span class="in"><span class="ln">Marketing</span></span></div><div class="g nopad" style="--x:560;--y:30;--w:450;--h:300;--gw:450;--gh:300"><div class="r " style="--x:28;--y:26;--w:403;--h:268;border:calc(3*var(--u)) solid #ff8c61;transform:rotate(-1.5deg)"></div><div class="im pb" style="--x:12;--y:7;--w:403;--h:272;transform:rotate(-1.5deg)"><img src="a/259e234a.jpg" alt="Lindsay presenting at Five Guys" loading="lazy" style="left:-21.092%;top:-16.176%;width:134.739%;height:133.088%"></div></div><div class="t mont" id="t-summer-2026" style="--x:34;--y:287;--w:223;--h:36;--fs:24.92;letter-spacing:.12em;font-weight:600"><span class="in"><span class="ln">SUMMER 2026</span></span></div><div class="t dsp" id="t-featured-projects" style="--x:34;--y:335;--w:398;--h:48;--fs:40.61"><span class="in"><span class="ln">FEATURED PROJECTS</span></span></div><div class="t bod  pitch" id="t-as-five-guys-began-integrating-a" style="--x:34;--y:385;--w:980;--h:154;--fs:21.96;--lh:31"><span class="in"><span class="ln">As Five Guys began integrating a new go-to-market approach the week I started, I</span><span class="ln">helped introduce teams to the process and explain how it could support</span><span class="ln">campaign planning. I developed a Window Brief template to put that approach</span><span class="ln">into practice, bringing campaign priorities, team responsibilities, and timelines</span><span class="ln">together to connect the commercial calendar with launch planning.</span></span></div><div class="r decor" style="--x:51;--y:606;--w:430;--h:1204;background:#ffd3b8;border-radius:calc(14*var(--u))"></div><div class="r decor" style="--x:550;--y:614;--w:430;--h:1204;background:#ffd3b8;border-radius:calc(14*var(--u))"></div><div class="t dsp" id="t-introduction" style="--x:30;--y:553;--w:322;--h:48;--fs:40.54"><span class="in"><span class="ln">INTRODUCTION</span></span></div><div class="row" style="--cols:1"><div class="g solo" style="--x:62;--y:613;--w:399;--h:226;--gw:399;--gh:226"><div class="im " style="--x:0;--y:0;--w:399;--h:226"><img src="a/4b8d1303.jpg" alt="Marketing internship project cover" loading="lazy" style="left:0.000%;top:0.000%;width:100.000%;height:100.000%"></div></div><div class="g solo" style="--x:62;--y:863;--w:398;--h:225;--gw:398;--gh:225"><div class="im " style="--x:0;--y:0;--w:398;--h:225"><img src="a/0b43cadf.jpg" alt="What I observed" loading="lazy" style="left:0.000%;top:0.000%;width:100.000%;height:100.000%"></div></div><div class="g solo" style="--x:62;--y:1101;--w:399;--h:225;--gw:399;--gh:225"><div class="im " style="--x:0;--y:0;--w:399;--h:225"><img src="a/85acf995.jpg" alt="The solution: go to market" loading="lazy" style="left:0.000%;top:0.000%;width:100.000%;height:100.000%"></div></div><div class="g solo" style="--x:62;--y:1340;--w:399;--h:225;--gw:399;--gh:225"><div class="im " style="--x:0;--y:0;--w:399;--h:225"><img src="a/457af92b.jpg" alt="How a launch comes to life" loading="lazy" style="left:0.000%;top:0.000%;width:100.000%;height:100.000%"></div></div><div class="g solo" style="--x:60;--y:1579;--w:399;--h:225;--gw:399;--gh:225"><div class="im " style="--x:0;--y:0;--w:399;--h:225"><img src="a/2b3535d1.jpg" alt="What is a Window Brief" loading="lazy" style="left:0.000%;top:0.000%;width:100.000%;height:100.000%"></div></div></div><div class="t dsp" id="t-team-window-brief" style="--x:498;--y:553;--w:322;--h:48;--fs:40.51"><span class="in"><span class="ln">TEAM WINDOW BRIEF</span></span></div><div class="row" style="--cols:1"><div class="g solo" style="--x:567;--y:621;--w:397;--h:223;--gw:397;--gh:223"><div class="im " style="--x:0;--y:0;--w:397;--h:223"><img src="a/fa5f83a4.jpg" alt="Window Planning 2027 cover" loading="lazy" style="left:0.000%;top:0.000%;width:100.000%;height:100.000%"></div></div><div class="g solo" style="--x:568;--y:854;--w:395;--h:223;--gw:395;--gh:223"><div class="im " style="--x:0;--y:0;--w:395;--h:223"><img src="a/500c7e6b.jpg" alt="Window 3 brief" loading="lazy" style="left:0.000%;top:0.000%;width:100.000%;height:100.000%"></div></div><div class="g solo" style="--x:562;--y:1091;--w:406;--h:227;--gw:406;--gh:227"><div class="im " style="--x:0;--y:0;--w:406;--h:227"><img src="a/c390bb8e.jpg" alt="Benchmark" loading="lazy" style="left:0.000%;top:0.000%;width:100.000%;height:100.000%"></div></div><div class="g solo" style="--x:563;--y:1332;--w:405;--h:228;--gw:405;--gh:228"><div class="im " style="--x:0;--y:0;--w:405;--h:228"><img src="a/0f15d368.jpg" alt="Window 3 timeline" loading="lazy" style="left:0.000%;top:0.000%;width:100.000%;height:100.000%"></div></div><div class="g solo" style="--x:567;--y:1579;--w:401;--h:227;--gw:401;--gh:227"><div class="im " style="--x:0;--y:0;--w:401;--h:227"><img src="a/bfb0a65e.jpg" alt="Culinary" loading="lazy" style="left:0.000%;top:0.000%;width:100.000%;height:100.000%"></div></div></div><div class="r decor" style="--x:41;--y:1831;--w:951;--h:3;background:#ff8c61"></div><div class="t dsp" id="dtd" style="--x:45;--y:1858;--w:398;--h:59;--fs:50.56"><span class="in"><span class="ln">DAY TO DAY</span></span></div><div class="t bod  pitch" id="t-i-supported-the-marketing-team-t" style="--x:45;--y:1920;--w:960;--h:92;--fs:22.06;--lh:31"><span class="in"><span class="ln">I supported the marketing team through market &amp; trend research, competitive</span><span class="ln">analysis, social media brainstorming &amp; creation, fan outreach, Secret Shopper</span><span class="ln">program, and presentation organization.</span></span></div><div class="r decor" style="--x:34;--y:2023;--w:958;--h:387;background:#ffd3b8;border-radius:calc(14*var(--u))"></div><div class="row" style="--cols:2"><div class="g solo" style="--x:52;--y:2038;--w:286;--h:357;--gw:286;--gh:357"><div class="im vid" style="--x:0;--y:0;--w:286;--h:357"><video src="a/38653486.mp4" poster="a/260d2755.jpg" muted loop playsinline preload="none" aria-label="What&#x27;s your mix video"></video><button class="snd" type="button" aria-label="Turn sound on">&#128263;</button></div></div><div class="g solo" style="--x:373;--y:2036;--w:287;--h:359;--gw:287;--gh:359"><div class="im " style="--x:0;--y:0;--w:287;--h:359"><img src="a/04408382.jpg" alt="Five Guys feature post" loading="lazy" style="left:0.000%;top:0.000%;width:100.000%;height:100.000%"></div></div><div class="g solo" style="--x:694;--y:2042;--w:287;--h:359;--gw:287;--gh:359"><div class="im " style="--x:0;--y:0;--w:287;--h:359"><img src="a/a3326283.jpg" alt="Bacon cheeseburger player card post" loading="lazy" style="left:0.000%;top:0.000%;width:100.000%;height:100.000%"></div></div></div></section>
+<section id="gravity" class="sec" style="--sh:2523"><div class="t dsp" id="t-gravity-group-2" style="--x:43;--y:31;--w:809;--h:108;--fs:91.76"><span class="in"><span class="ln">GRAVITY GROUP</span></span></div><div class="t scr c" id="t-graphic-design" style="--x:-201;--y:141;--w:866;--h:91;--fs:73.27"><span class="in"><span class="ln">Graphic Design</span></span></div><div class="g " style="--x:611;--y:24;--w:397;--h:122;--gw:397;--gh:122"><div class="r " style="--x:0;--y:0;--w:397;--h:122;background:#ffd3b8;border:calc(4*var(--u)) solid #ff8c61;border-radius:999px"></div><div class="im " style="--x:7;--y:4;--w:370;--h:107"><img src="a/c854b034.png" alt="Gravity Group: brand, marketing, creative" loading="lazy" style="left:0.000%;top:0.000%;width:100.000%;height:100.000%"></div></div><div class="t mont" id="t-fall-2026" style="--x:43;--y:260;--w:223;--h:36;--fs:25.11;letter-spacing:.12em;font-weight:600"><span class="in"><span class="ln">FALL 2026</span></span></div><div class="t dsp" id="t-day-to-day" style="--x:34;--y:323;--w:398;--h:59;--fs:50.56"><span class="in"><span class="ln">DAY TO DAY</span></span></div><div class="t bod  pitch" id="t-i-help-create-digital-content-fo" style="--x:34;--y:385;--w:980;--h:92;--fs:22.06;--lh:31"><span class="in"><span class="ln">I help create digital content for clients across different industries, adapting each</span><span class="ln">design to their brand and audience. I also design thumbnails for Gravity Group’s</span><span class="ln">podcast to highlight each episode and support its promotion.</span></span></div><div class="t dsp" id="client" style="--x:12;--y:516;--w:768;--h:59;--fs:50.06"><span class="in"><span class="ln">ACOUSTICAL SHEETMETAL COMPANY</span></span></div><div class="r decor" style="--x:688;--y:545;--w:320;--h:3;background:#ff8c61"></div><div class="r decor" style="--x:43;--y:610;--w:904;--h:355;background:#ffd3b8;border-radius:calc(14*var(--u))"></div><div class="row" style="--cols:2"><div class="g solo" style="--x:111;--y:629;--w:368;--h:310;--gw:368;--gh:310"><div class="im " style="--x:0;--y:0;--w:368;--h:310"><img src="a/9ba2bacc.jpg" alt="Manufacturing Day post" loading="lazy" style="left:0.000%;top:0.000%;width:100.000%;height:100.000%"></div></div><div class="g solo" style="--x:567;--y:629;--w:312;--h:310;--gw:312;--gh:310"><div class="im " style="--x:0;--y:0;--w:312;--h:310"><img src="a/4f228f9f.jpg" alt="Buddy Program post" loading="lazy" style="left:0.000%;top:0.000%;width:100.000%;height:100.000%"></div></div></div><div class="t dsp" id="t-harrisonburg-electric-commission" style="--x:15;--y:999;--w:800;--h:59;--fs:50.06"><span class="in"><span class="ln">HARRISONBURG ELECTRIC COMMISSION</span></span></div><div class="r decor" style="--x:736;--y:1027;--w:272;--h:3;background:#ff8c61"></div><div class="r decor" style="--x:133;--y:1099;--w:768;--h:363;background:#ffd3b8;border-radius:calc(14*var(--u))"></div><div class="r decor" style="--x:12;--y:1434;--w:1000;--h:363;background:#ffd3b8;border-radius:calc(14*var(--u))"></div><div class="row" style="--cols:2"><div class="g solo" style="--x:167;--y:1118;--w:311;--h:310;--gw:311;--gh:310"><div class="im " style="--x:0;--y:0;--w:311;--h:310"><img src="a/2a212a57.jpg" alt="Skeleton Festival post" loading="lazy" style="left:0.000%;top:0.000%;width:100.000%;height:100.000%"></div></div><div class="g solo" style="--x:504;--y:1117;--w:366;--h:313;--gw:366;--gh:313"><div class="im " style="--x:0;--y:0;--w:366;--h:313"><img src="a/17f16549.jpg" alt="The Public Power Difference post" loading="lazy" style="left:0.000%;top:0.000%;width:100.000%;height:100.000%"></div></div><div class="g solo" style="--x:21;--y:1453;--w:316;--h:315;--gw:316;--gh:315"><div class="im " style="--x:0;--y:0;--w:316;--h:315"><img src="a/cd1baf1a.jpg" alt="Small choices, smarter energy use" loading="lazy" style="left:0.000%;top:0.000%;width:100.000%;height:100.000%"></div></div><div class="g solo" style="--x:361;--y:1453;--w:315;--h:315;--gw:315;--gh:315"><div class="im " style="--x:0;--y:0;--w:315;--h:315"><img src="a/3a6d9dfb.jpg" alt="Build smarter habits" loading="lazy" style="left:0.000%;top:0.000%;width:100.000%;height:100.000%"></div></div><div class="g solo" style="--x:701;--y:1458;--w:305;--h:304;--gw:305;--gh:304"><div class="im " style="--x:0;--y:0;--w:305;--h:304"><img src="a/ca309044.png" alt="Understand your use" loading="lazy" style="left:0.000%;top:0.000%;width:100.000%;height:100.000%"></div></div></div><div class="t dsp" id="t-new-country-organics" style="--x:18;--y:1827;--w:768;--h:59;--fs:50.06"><span class="in"><span class="ln">NEW COUNTRY ORGANICS</span></span></div><div class="r decor" style="--x:488;--y:1855;--w:523;--h:3;background:#ff8c61"></div><div class="r decor" style="--x:9;--y:1893;--w:1000;--h:553;background:#ffd3b8;border-radius:calc(14*var(--u))"></div><div class="row" style="--cols:2"><div class="g solo" style="--x:26;--y:1900;--w:258;--h:257;--gw:258;--gh:257"><div class="im " style="--x:0;--y:0;--w:258;--h:257"><img src="a/4cf3f2ed.jpg" alt="Shop New Country Organics" loading="lazy" style="left:0.000%;top:0.000%;width:100.000%;height:100.000%"></div></div><div class="g solo" style="--x:26;--y:2171;--w:258;--h:258;--gw:258;--gh:258"><div class="im " style="--x:0;--y:0;--w:258;--h:258"><img src="a/3c5a2fb8.jpg" alt="How to contribute to sustainable agriculture" loading="lazy" style="left:0.000%;top:0.000%;width:100.000%;height:100.000%"></div></div><div class="g solo" style="--x:299;--y:1959;--w:342;--h:433;--gw:342;--gh:433"><div class="im " style="--x:0;--y:0;--w:342;--h:433"><img src="a/0265eb80.jpg" alt="Fermenting chicken feed guide" loading="lazy" style="left:-2.339%;top:0.000%;width:102.047%;height:100.000%"></div></div><div class="g solo" style="--x:657;--y:1959;--w:345;--h:433;--gw:345;--gh:433"><div class="im " style="--x:0;--y:0;--w:345;--h:433"><img src="a/4eca082c.jpg" alt="Fermenting step-by-step instructions" loading="lazy" style="left:-0.580%;top:0.000%;width:100.580%;height:100.000%"></div></div></div></section>
+<section id="chbs" class="sec" style="--sh:3518"><div class="t dsp" id="t-james-madison-university" style="--x:26;--y:17;--w:998;--h:108;--fs:91.33"><span class="in"><span class="ln">JAMES MADISON UNIVERSITY</span></span></div><div class="t scr" id="socmed" style="--x:27;--y:106;--w:521;--h:125;--fs:77.96"><span class="in"><span class="ln">Social Media</span></span></div><div class="t dsp  pitch" id="t-college-of-health-behavioral-stu" style="--x:536;--y:126;--w:488;--h:136;--fs:59.64;--lh:66"><span class="in"><span class="ln">COLLEGE OF HEALTH &amp;</span><span class="ln">BEHAVIORAL STUDIES</span></span></div><div class="t mont" id="t-fall-2025" style="--x:35;--y:277;--w:223;--h:36;--fs:25.13;letter-spacing:.12em;font-weight:600"><span class="in"><span class="ln">FALL 2025</span></span></div><div class="t dsp" id="t-day-to-day-2" style="--x:26;--y:340;--w:398;--h:59;--fs:50.56"><span class="in"><span class="ln">DAY TO DAY</span></span></div><div class="t bod  pitch" id="t-my-goal-as-a-chbs-social-media-i" style="--x:26;--y:402;--w:990;--h:215;--fs:22.06;--lh:31"><span class="in"><span class="ln">My goal as a CHBS Social Media Intern was to highlight the incredible variety of</span><span class="ln">majors, students, faculty, and staff that make up the College of Health and</span><span class="ln">Behavioral Studies. I wanted to create engaging, informative content that</span><span class="ln">celebrated our community while keeping students in the loop about events,</span><span class="ln">organizations, and helpful tips. Through creative campaigns like the CHBS Action</span><span class="ln">Figure Series, midterm guides, and themed videos, I focused on making CHBS’s</span><span class="ln">social media fun, relatable, and student-centered.</span></span></div><div class="t dsp" id="camp" style="--x:14;--y:632;--w:343;--h:59;--fs:51.80"><span class="in"><span class="ln">VIDEO CAMPAIGNS</span></span></div><div class="r decor" style="--x:357;--y:660;--w:653;--h:3;background:#ff8c61"></div><div class="row" style="--cols:2"><div class="g solo" style="--x:48;--y:737;--w:296;--h:563;--gw:296;--gh:563"><div class="im vid ph" style="--x:0;--y:0;--w:296;--h:563"><video src="a/9d87bd99.mp4" poster="a/61c8f7a6.jpg" muted loop playsinline preload="none" aria-label="CHBS reel"></video><span class="nav" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span><span class="pill" aria-hidden="true"></span><button class="snd" type="button" aria-label="Turn sound on">&#128263;</button></div></div><div class="g solo" style="--x:368;--y:737;--w:296;--h:563;--gw:296;--gh:563"><div class="im vid ph" style="--x:0;--y:0;--w:296;--h:563"><video src="a/fa92117d.mp4" poster="a/97705b23.jpg" muted loop playsinline preload="none" aria-label="CHBS reel"></video><span class="nav" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span><span class="pill" aria-hidden="true"></span><button class="snd" type="button" aria-label="Turn sound on">&#128263;</button></div></div><div class="g solo" style="--x:687;--y:737;--w:296;--h:563;--gw:296;--gh:563"><div class="im vid ph" style="--x:0;--y:0;--w:296;--h:563"><video src="a/d84e5363.mp4" poster="a/00736cc4.jpg" muted loop playsinline preload="none" aria-label="CHBS reel"></video><span class="nav" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span><span class="pill" aria-hidden="true"></span><button class="snd" type="button" aria-label="Turn sound on">&#128263;</button></div></div><div class="g solo" style="--x:58;--y:1317;--w:296;--h:563;--gw:296;--gh:563"><div class="im vid ph" style="--x:0;--y:0;--w:296;--h:563"><video src="a/6047c0e1.mp4" poster="a/b598770a.jpg" muted loop playsinline preload="none" aria-label="CHBS reel"></video><span class="nav" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span><span class="pill" aria-hidden="true"></span><button class="snd" type="button" aria-label="Turn sound on">&#128263;</button></div></div><div class="g solo" style="--x:377;--y:1317;--w:296;--h:563;--gw:296;--gh:563"><div class="im vid ph" style="--x:0;--y:0;--w:296;--h:563"><video src="a/e24d6832.mp4" poster="a/5ba1a695.jpg" muted loop playsinline preload="none" aria-label="CHBS reel"></video><span class="nav" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span><span class="pill" aria-hidden="true"></span><button class="snd" type="button" aria-label="Turn sound on">&#128263;</button></div></div><div class="g solo" style="--x:697;--y:1317;--w:296;--h:563;--gw:296;--gh:563"><div class="im vid ph" style="--x:0;--y:0;--w:296;--h:563"><video src="a/1866c5a7.mp4" poster="a/8e771a91.jpg" muted loop playsinline preload="none" aria-label="CHBS reel"></video><span class="nav" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span><span class="pill" aria-hidden="true"></span><button class="snd" type="button" aria-label="Turn sound on">&#128263;</button></div></div></div><div class="t dsp" id="t-midterm-survival-guide" style="--x:22;--y:1929;--w:570;--h:59;--fs:51.80"><span class="in"><span class="ln">MIDTERM SURVIVAL GUIDE</span></span></div><div class="r decor" style="--x:521;--y:1956;--w:489;--h:3;background:#ff8c61"></div><div class="row" style="--cols:3"><div class="g solo" style="--x:14;--y:1991;--w:161;--h:286;--gw:161;--gh:286"><div class="im " style="--x:0;--y:0;--w:161;--h:286"><img src="a/50d9d6a4.jpg" alt="Midterm Survival Guide slide" loading="lazy" style="left:0.000%;top:0.000%;width:100.000%;height:100.000%"></div></div><div class="g solo" style="--x:181;--y:1991;--w:161;--h:286;--gw:161;--gh:286"><div class="im " style="--x:0;--y:0;--w:161;--h:286"><img src="a/196c3eb4.jpg" alt="Midterm Survival Guide slide" loading="lazy" style="left:0.000%;top:0.000%;width:100.000%;height:100.000%"></div></div><div class="g solo" style="--x:348;--y:1991;--w:161;--h:286;--gw:161;--gh:286"><div class="im " style="--x:0;--y:0;--w:161;--h:286"><img src="a/8e01e131.jpg" alt="Midterm Survival Guide slide" loading="lazy" style="left:0.000%;top:0.000%;width:100.000%;height:100.000%"></div></div><div class="g solo" style="--x:515;--y:1988;--w:160;--h:288;--gw:160;--gh:288"><div class="im " style="--x:0;--y:0;--w:160;--h:288"><img src="a/e7dd6fd6.jpg" alt="Midterm Survival Guide slide" loading="lazy" style="left:0.000%;top:-0.347%;width:102.500%;height:101.042%"></div></div><div class="g " style="--x:682;--y:1988;--w:161;--h:288;--gw:161;--gh:288"><div class="im " style="--x:0;--y:0;--w:161;--h:288"><img src="a/bca37eea.jpg" alt="Midterm Survival Guide slide" loading="lazy" style="left:-1.242%;top:0.000%;width:100.621%;height:100.000%"></div><div class="im round" style="--x:30;--y:56;--w:87;--h:87"><img src="a/1860908a.jpg" alt="Dukes Run on Dunkin" loading="lazy" style="left:0.000%;top:0.000%;width:100.000%;height:100.000%"></div></div><div class="g solo" style="--x:848;--y:1988;--w:163;--h:289;--gw:163;--gh:289"><div class="im " style="--x:0;--y:0;--w:163;--h:289"><img src="a/7d0ed58c.jpg" alt="Midterm Survival Guide slide" loading="lazy" style="left:0.000%;top:0.000%;width:100.000%;height:100.000%"></div></div></div><div class="t dsp" id="t-superhero-majors" style="--x:22;--y:2323;--w:570;--h:59;--fs:51.80"><span class="in"><span class="ln">SUPERHERO MAJORS</span></span></div><div class="r decor" style="--x:433;--y:2354;--w:577;--h:3;background:#ff8c61"></div><div class="row" style="--cols:2"><div class="g solo" style="--x:22;--y:2392;--w:248;--h:340;--gw:248;--gh:340"><div class="im " style="--x:0;--y:0;--w:248;--h:340"><img src="a/4de2d107.png" alt="Social Work major action figure" loading="lazy" style="left:-1.210%;top:-9.118%;width:108.468%;height:118.529%"></div></div><div class="g solo" style="--x:257;--y:2361;--w:255;--h:382;--gw:255;--gh:382"><div class="im " style="--x:0;--y:0;--w:255;--h:382"><img src="a/6e399268.png" alt="Psychology major action figure" loading="lazy" style="left:0.000%;top:0.000%;width:100.000%;height:100.000%"></div></div><div class="g solo" style="--x:475;--y:2354;--w:269;--h:404;--gw:269;--gh:404"><div class="im " style="--x:0;--y:0;--w:269;--h:404"><img src="a/1a492157.png" alt="Health Professions major action figure" loading="lazy" style="left:0.000%;top:0.000%;width:100.372%;height:100.000%"></div></div><div class="g solo" style="--x:710;--y:2355;--w:267;--h:401;--gw:267;--gh:401"><div class="im " style="--x:0;--y:0;--w:267;--h:401"><img src="a/d672d0c7.png" alt="Kinesiology major action figure" loading="lazy" style="left:0.000%;top:0.000%;width:100.000%;height:100.000%"></div></div><div class="g solo" style="--x:19;--y:2693;--w:269;--h:403;--gw:269;--gh:403"><div class="im " style="--x:0;--y:0;--w:269;--h:403"><img src="a/23bcde14.png" alt="Communication Sciences and Disorders major action figure" loading="lazy" style="left:0.000%;top:0.000%;width:100.000%;height:100.000%"></div></div><div class="g solo" style="--x:245;--y:2683;--w:277;--h:416;--gw:277;--gh:416"><div class="im " style="--x:0;--y:0;--w:277;--h:416"><img src="a/dae99b45.png" alt="Nursing major action figure" loading="lazy" style="left:0.000%;top:0.000%;width:100.000%;height:100.000%"></div></div><div class="g solo" style="--x:475;--y:2690;--w:273;--h:410;--gw:273;--gh:410"><div class="im " style="--x:0;--y:0;--w:273;--h:410"><img src="a/622a4d9c.png" alt="Athletic Training major action figure" loading="lazy" style="left:0.000%;top:0.000%;width:100.000%;height:100.000%"></div></div><div class="g solo" style="--x:717;--y:2690;--w:254;--h:381;--gw:254;--gh:381"><div class="im " style="--x:0;--y:0;--w:254;--h:381"><img src="a/07411d0a.png" alt="Health Sciences major action figure" loading="lazy" style="left:0.000%;top:0.000%;width:100.000%;height:100.000%"></div></div></div><div class="row" style="--cols:2"><div class="g solo" style="--x:42;--y:3092;--w:309;--h:385;--gw:309;--gh:385"><div class="im " style="--x:0;--y:0;--w:309;--h:385"><img src="a/df226ac8.jpg" alt="National Student Nurse Day" loading="lazy" style="left:0.000%;top:0.000%;width:100.000%;height:100.000%"></div></div><div class="g solo" style="--x:363;--y:3098;--w:303;--h:379;--gw:303;--gh:379"><div class="im " style="--x:0;--y:0;--w:303;--h:379"><img src="a/6c72f94a.jpg" alt="Grad Spotlight 2026" loading="lazy" style="left:0.000%;top:0.000%;width:100.000%;height:100.000%"></div></div><div class="g solo" style="--x:681;--y:3100;--w:301;--h:378;--gw:301;--gh:378"><div class="im " style="--x:0;--y:0;--w:301;--h:378"><img src="a/0c0fc38f.jpg" alt="Good luck on finals" loading="lazy" style="left:0.000%;top:0.000%;width:100.000%;height:100.000%"></div></div></div></section>
+<section id="cardinals" class="sec" style="--sh:645"><div class="t dsp" id="t-front-royal-cardinals" style="--x:39;--y:1;--w:864;--h:108;--fs:91.65"><span class="in"><span class="ln">FRONT ROYAL CARDINALS</span></span></div><div class="t scr" id="t-social-media" style="--x:40;--y:106;--w:520;--h:91;--fs:77.96"><span class="in"><span class="ln">Social Media</span></span></div><div class="t mont" id="sum2" style="--x:41;--y:232;--w:251;--h:40;--fs:27.88;letter-spacing:.12em;font-weight:600"><span class="in"><span class="ln">SUMMER 2026</span></span></div><div class="t dsp" id="role" style="--x:40;--y:292;--w:318;--h:65;--fs:50.29;letter-spacing:.05em"><span class="in"><span class="ln">About My Role</span></span></div><div class="t lab  pitch" id="rolep" style="--x:41;--y:356;--w:310;--h:241;--fs:24.38;--lh:35"><span class="in"><span class="ln">I’ve recently started</span><span class="ln">working with the Front</span><span class="ln">Royal Cardinals to</span><span class="ln">coordinate with the</span><span class="ln">players to get photos to</span><span class="ln">make player introduction</span><span class="ln">posts.</span></span></div><div class="row" style="--cols:2"><div class="g solo" style="--x:353;--y:235;--w:308;--h:385;--gw:308;--gh:385"><div class="im " style="--x:0;--y:0;--w:308;--h:385"><img src="a/6c8aae66.jpg" alt="Host families needed post" loading="lazy" style="left:0.000%;top:0.000%;width:100.000%;height:100.000%"></div></div><div class="g solo" style="--x:683;--y:235;--w:307;--h:385;--gw:307;--gh:385"><div class="im " style="--x:0;--y:0;--w:307;--h:385"><img src="a/339584cf.jpg" alt="Player introduction: Jonathan Maassen" loading="lazy" style="left:-1.629%;top:-1.558%;width:101.954%;height:101.558%"></div></div></div></section>
+<section id="doordash" class="sec" style="--sh:1017"><div class="t dsp" id="t-doordash-2" style="--x:39;--y:21;--w:864;--h:108;--fs:91.46"><span class="in"><span class="ln">DOORDASH</span></span></div><div class="t scr" id="t-campus-ambassador-2" style="--x:27;--y:118;--w:560;--h:99;--fs:70.75"><span class="in"><span class="ln">Campus Ambassador</span></span></div><div class="g nopad" style="--x:571;--y:-19;--w:400;--h:223;--gw:400;--gh:223"><div class="r " style="--x:0;--y:51;--w:400;--h:119;background:#ffd3b8;border:calc(4*var(--u)) solid #ff8c61;border-radius:999px"></div><div class="im " style="--x:15;--y:0;--w:367;--h:223"><img src="a/4078b2a3.png" alt="DoorDash logo" loading="lazy" style="left:0.000%;top:0.000%;width:100.000%;height:100.000%"></div></div><div class="t mont" id="t-fall-2024" style="--x:41;--y:232;--w:251;--h:40;--fs:27.88;letter-spacing:.12em;font-weight:600"><span class="in"><span class="ln">FALL 2024</span></span></div><div class="t dsp" id="t-about-my-role" style="--x:40;--y:292;--w:318;--h:65;--fs:50.29;letter-spacing:.05em"><span class="in"><span class="ln">About My Role</span></span></div><div class="t lab  pitch" id="t-as-a-doordash-campus-ambassador-" style="--x:41;--y:357;--w:310;--h:525;--fs:24.38;--lh:37"><span class="in"><span class="ln">As a DoorDash Campus</span><span class="ln">Ambassador at James</span><span class="ln">Madison University, I</span><span class="ln">helped promote the</span><span class="ln">brand through campus</span><span class="ln">events and student</span><span class="ln">engagement. My role</span><span class="ln">involved connecting</span><span class="ln">with students, sharing</span><span class="ln">promotions, and</span><span class="ln">supporting activities</span><span class="ln">that brought DoorDash</span><span class="ln">into the campus</span><span class="ln">community.</span></span></div><div class="row" style="--cols:2"><div class="g solo" style="--x:408;--y:235;--w:328;--h:416;--gw:328;--gh:416"><div class="im " style="--x:0;--y:0;--w:328;--h:416"><img src="a/cf43af67.jpg" alt="DoorDash campus table" loading="lazy" style="left:-5.488%;top:-10.337%;width:108.841%;height:114.423%"></div></div><div class="g solo" style="--x:619;--y:540;--w:333;--h:385;--gw:333;--gh:385"><div class="im " style="--x:0;--y:0;--w:333;--h:385"><img src="a/d026c54c.jpg" alt="DoorDash campus event" loading="lazy" style="left:-6.306%;top:-21.818%;width:107.207%;height:121.818%"></div></div></div></section>
+<section id="photography" class="sec" style="--sh:1843"><div class="t dsp" id="t-photography" style="--x:19;--y:0;--w:872;--h:93;--fs:93.39"><span class="in"><span class="ln">PHOTOGRAPHY</span></span></div><div class="t scr" id="t-telling-stories-through-pictures" style="--x:19;--y:99;--w:1005;--h:88;--fs:82.22"><span class="in"><span class="ln">Telling Stories Through Pictures</span></span></div><div class="t lab  pitch" id="t-what-began-as-taking-pictures-of" style="--x:11;--y:239;--w:440;--h:423;--fs:24.74;--lh:36"><span class="in"><span class="ln">What began as taking pictures of my</span><span class="ln">sister with my mom’s old camera has</span><span class="ln">grown into a true creative passion.</span><span class="ln">Through my internship with CHBS,</span><span class="ln">I’ve been able to turn that hobby into</span><span class="ln">something meaningful, capturing</span><span class="ln">moments that celebrate student life,</span><span class="ln">friendships, and milestones. I love</span><span class="ln">photographing genuine moments</span><span class="ln">around JMU that highlight the</span><span class="ln">people, pride, and community that</span><span class="ln">make this campus feel like home.</span></span></div><div class="row" style="--cols:2"><div class="g solo" style="--x:451;--y:241;--w:288;--h:414;--gw:288;--gh:414"><div class="im " style="--x:0;--y:0;--w:288;--h:414"><img src="a/bc92814f.jpg" alt="Graduates in caps and gowns" loading="lazy" style="left:0.000%;top:0.000%;width:100.000%;height:105.314%"></div></div><div class="g solo" style="--x:774;--y:243;--w:235;--h:413;--gw:235;--gh:413"><div class="im " style="--x:0;--y:0;--w:235;--h:413"><img src="a/1fdf8c3c.jpg" alt="Graduate on campus" loading="lazy" style="left:0.000%;top:0.000%;width:100.000%;height:100.000%"></div></div><div class="g solo" style="--x:11;--y:682;--w:530;--h:297;--gw:530;--gh:297"><div class="im " style="--x:0;--y:0;--w:530;--h:297"><img src="a/6148bcfb.jpg" alt="Champagne celebration at Carrier Library" loading="lazy" style="left:-33.585%;top:-51.515%;width:174.906%;height:165.320%"></div></div><div class="g solo" style="--x:552;--y:681;--w:457;--h:298;--gw:457;--gh:298"><div class="im " style="--x:0;--y:0;--w:457;--h:298"><img src="a/315424f9.jpg" alt="Graduates in purple gowns" loading="lazy" style="left:-5.908%;top:-19.799%;width:108.096%;height:120.134%"></div></div><div class="g solo" style="--x:11;--y:993;--w:323;--h:424;--gw:323;--gh:424"><div class="im " style="--x:0;--y:0;--w:323;--h:424"><img src="a/a71db87f.jpg" alt="Campus walkway" loading="lazy" style="left:0.000%;top:0.000%;width:103.406%;height:118.160%"></div></div><div class="g solo" style="--x:353;--y:993;--w:324;--h:424;--gw:324;--gh:424"><div class="im " style="--x:0;--y:0;--w:324;--h:424"><img src="a/4262ba54.jpg" alt="Nursing simulation lab" loading="lazy" style="left:0.000%;top:-14.623%;width:100.000%;height:114.623%"></div></div><div class="g solo" style="--x:697;--y:993;--w:312;--h:448;--gw:312;--gh:448"><div class="im " style="--x:0;--y:0;--w:312;--h:448"><img src="a/ce0aa115.jpg" alt="Health sciences lab" loading="lazy" style="left:0.000%;top:-4.688%;width:100.000%;height:104.688%"></div></div><div class="g solo" style="--x:11;--y:1430;--w:323;--h:408;--gw:323;--gh:408"><div class="im " style="--x:0;--y:0;--w:323;--h:408"><img src="a/f3ddd696.jpg" alt="Students in a classroom" loading="lazy" style="left:-1.858%;top:-19.118%;width:103.715%;height:123.039%"></div></div><div class="g solo" style="--x:349;--y:1428;--w:336;--h:410;--gw:336;--gh:410"><div class="im " style="--x:0;--y:0;--w:336;--h:410"><img src="a/eee3ad96.jpg" alt="Students outside a campus building" loading="lazy" style="left:-27.083%;top:-47.073%;width:140.476%;height:167.317%"></div></div></div></section>
+<section id="contact" class="sec" style="--sh:576"><div class="t dsp" id="t-work-with-me" style="--x:10;--y:37;--w:1014;--h:93;--fs:94.25"><span class="in"><span class="ln">WORK WITH ME!</span></span></div><svg class="r decor" style="--x:896;--y:23;--w:104;--h:96" viewBox="32.2 108.5 396.5 367.2" aria-hidden="true"><g fill="#ff8c61"><path d="M119.962,308.881c-12.274-19.922-36.25-30.455-82.752-32.989c-2.232-0.042-4.184-1.665-4.564-3.946c-0.428-2.569,1.31-5.007,3.882-5.436c40.687-6.901,65.926-11.86,83.126-26.545c17.245-14.721,27.369-39.908,38.099-87.503l0.003,0.006c0.477-2.13,2.389-3.71,4.654-3.687c2.606,0.037,4.691,2.172,4.661,4.772c-1.324,110.544,32.605,114.646,89.877,121.565l5.897,0.719l-0.003,0.012c2.383,0.289,4.202,2.347,4.145,4.79c-0.063,2.606-2.223,4.669-4.826,4.609c-40.597-1.067-64.94,5.635-81.506,23.571c-16.896,18.298-26.455,48.692-37.151,94.555l-0.012-0.006c-0.479,2.07-2.32,3.627-4.537,3.65c-2.603,0.03-4.739-2.057-4.769-4.664C133.642,360.07,132.481,329.199,119.962,308.881 M69.74,270.039c29.879,5.509,47.583,16.579,58.246,33.889c9.924,16.102,13.363,37.199,14.724,64.059c8.301-29.496,17.351-50.793,30.992-65.562c11.33-12.271,25.55-19.872,44.741-23.698c-34.189-8.006-55.501-26.363-59.959-91.05c-8.694,29.241-18.404,47.263-32.69,59.462C111.99,258.927,94.409,264.912,69.74,270.039z"/><path d="M182.458,390.814l48.795-6.721l13.348-56.74l0.012,0.006c0.489-2.105,2.38-3.662,4.63-3.645c2.604,0.019,4.697,2.148,4.676,4.748l-0.63,57.93l43.836,6.195c2.129,0.193,3.927,1.816,4.25,4.025c0.38,2.588-1.409,4.988-3.991,5.363l-45.972,6.732l-13.505,63.232h-0.012c-0.449,2.136-2.344,3.734-4.612,3.734c-2.603,0-4.715-2.111-4.715-4.712l0.103-63.214l-46.306-7.596c-2.015-0.314-3.671-1.912-3.955-4.037C178.061,393.535,179.874,391.158,182.458,390.814 M235.48,393.041l-20.748,2.854l19.417,3.186c2.398,0.393,4.082,2.527,3.958,4.898l-0.037,21.955l4.785-22.407c0.422-1.985,2.039-3.415,3.939-3.692l16.729-2.455l-15.644-2.208c-2.474-0.345-4.229-2.54-4.063-4.995l0.208-19.076l-4.304,18.297C239.241,391.455,237.483,392.885,235.48,393.041z"/><path d="M231.38,221.648l84.529-11.644l23.022-97.868l0.012,0.006c0.489-2.105,2.383-3.668,4.63-3.649c2.603,0.024,4.697,2.147,4.679,4.754l-1.101,100.552l76.918,10.866c2.13,0.192,3.928,1.821,4.25,4.024c0.38,2.588-1.409,4.988-3.991,5.363l-79.775,11.686l-23.251,108.873l-0.009-0.007c-0.45,2.136-2.347,3.741-4.612,3.741c-2.606,0-4.715-2.112-4.715-4.719l0.172-109.379l-80.852-13.26c-2.015-0.309-3.671-1.913-3.958-4.037C226.982,224.369,228.795,221.992,231.38,221.648 M320.132,218.951l-56.478,7.783l53.962,8.851c2.401,0.386,4.081,2.521,3.958,4.899l-0.108,68.112l14.533-68.04c0.419-1.985,2.037-3.415,3.937-3.693l50.533-7.408l-48.726-6.883c-2.471-0.338-4.229-2.535-4.063-4.99l0.675-61.699l-13.981,59.432C323.894,217.371,322.135,218.801,320.132,218.951z"/></g></svg><div class="g " style="--x:39;--y:156;--w:473;--h:324;--gw:473;--gh:324"><div class="im " style="--x:0;--y:0;--w:473;--h:324"><img src="a/4cc97c99-denim.jpg" alt="Lindsay sitting in a wooden gazebo" loading="lazy" style="left:-3.383%;top:-0.926%;width:103.383%;height:100.617%"></div></div><div class="t mont" id="t-location" style="--x:597;--y:118;--w:403;--h:23;--fs:16.94;letter-spacing:.12em;font-weight:600"><span class="in"><span class="ln">LOCATION</span></span></div><div class="t mont" id="cval" style="--x:597;--y:156;--w:403;--h:25;--fs:22.21;font-weight:700"><span class="in"><span class="ln">Herndon, VA</span></span></div><div class="t mont  pitch" id="t-always-open-to-relocating-and-ex" style="--x:597;--y:181;--w:403;--h:50;--fs:22.21;font-weight:700;--lh:25"><span class="in"><span class="ln">(always open to relocating and</span><span class="ln">experiencing something new)</span></span></div><div class="t mont" id="t-phone" style="--x:597;--y:262;--w:403;--h:25;--fs:18.91;letter-spacing:.12em;font-weight:600"><span class="in"><span class="ln">Phone</span></span></div><div class="t mont sel" id="t-571-446-8715" style="--x:597;--y:296;--w:403;--h:25;--fs:22.21;font-weight:700"><span class="in"><span class="ln">571-446-8715</span></span></div><div class="t mont" id="t-email" style="--x:597;--y:344;--w:403;--h:25;--fs:18.52;letter-spacing:.12em;font-weight:600"><span class="in"><span class="ln">Email</span></span></div><div class="t mont sel" id="t-lindsay-marshall-outlook-com" style="--x:597;--y:378;--w:427;--h:25;--fs:22.21;font-weight:700"><span class="in"><span class="ln">Lindsay.Marshall@outlook.com</span></span></div><div class="t mont" id="t-linkedin" style="--x:597;--y:426;--w:403;--h:25;--fs:18.91;letter-spacing:.12em;font-weight:600"><span class="in"><span class="ln">LinkedIn</span></span></div><a class="t mont" id="t-linkedin-url" href="https://www.linkedin.com/in/lindsay-marshall" style="--x:597;--y:460;--w:427;--h:25;--fs:22.21;font-weight:700"><span class="in"><span class="ln">linkedin.com/in/lindsay-marshall</span></span></a></section><section id="designwork" class="sec flow" aria-labelledby="dw-title">
+<div class="dw-head"><h2 id="dw-title">Design Work</h2>
+<p class="dw-sub"><span class="dw-hover">Hover over</span><span class="dw-tap">Tap</span> a design to take a closer look</p></div>
+<div class="dw-row" id="ai-work">
+<div class="dw-label"><img src="a/3b2ac8ab.png" alt="" width="44" height="44"><h3>Illustrator</h3><span>7 projects</span></div>
+<ul class="dw-grid">
+<li><button class="dw-card" type="button" aria-label="McGreen logo redesign: Green redesign of a fast-food logo"><img src="w/ai-mcgreen-cut.png" alt="McGreen logo redesign" loading="lazy"><span class="dw-cap"><b>McGreen logo redesign</b>Green redesign of a fast-food logo</span></button></li>
+<li><button class="dw-card" type="button" aria-label="LM personal brand: Monogram stamp for my own brand"><img src="w/ai-brand-cut.png" alt="LM personal brand" loading="lazy"><span class="dw-cap"><b>LM personal brand</b>Monogram stamp for my own brand</span></button></li>
+<li><button class="dw-card" type="button" aria-label="Protect the Gorillas truck wrap: Vehicle graphics for a conservation fund"><img src="w/ai-truck-cut.png" alt="Protect the Gorillas truck wrap" loading="lazy"><span class="dw-cap"><b>Protect the Gorillas truck wrap</b>Vehicle graphics for a conservation fund</span></button></li>
+<li><button class="dw-card" type="button" aria-label="Marshall LLC mascot: Dog mascot illustration"><img src="w/ai-mascot.png" alt="Marshall LLC mascot" loading="lazy"><span class="dw-cap"><b>Marshall LLC mascot</b>Dog mascot illustration</span></button></li>
+<li><button class="dw-card" type="button" aria-label="Wonder Women business card: Superhero-themed business card"><img src="w/ai-cards-cut.png" alt="Wonder Women business card" loading="lazy"><span class="dw-cap"><b>Wonder Women business card</b>Superhero-themed business card</span></button></li>
+<li><button class="dw-card" type="button" aria-label="The Slow Rush album art: Album cover shown in a streaming app"><img src="w/ai-album.jpg" alt="The Slow Rush album art" loading="lazy"><span class="dw-cap"><b>The Slow Rush album art</b>Album cover shown in a streaming app</span></button></li>
+<li><button class="dw-card" type="button" aria-label="Negative space logo: Pine trees and a river in one mark"><img src="w/ai-negative-cut.png" alt="Negative space logo" loading="lazy"><span class="dw-cap"><b>Negative space logo</b>Pine trees and a river in one mark</span></button></li>
+</ul></div>
+<div class="dw-row" id="ps-work">
+<div class="dw-label"><img src="a/777228a8.png" alt="" width="44" height="44"><h3>Photoshop</h3><span>8 projects</span></div>
+<ul class="dw-grid">
+<li><button class="dw-card" type="button" aria-label="Five Guys summer ad: Social ad: Summer Starts with Five Guys"><img src="w/ps-fiveguys.jpg" alt="Five Guys summer ad" loading="lazy"><span class="dw-cap"><b>Five Guys summer ad</b>Social ad: Summer Starts with Five Guys</span></button></li>
+<li><button class="dw-card" type="button" aria-label="Greetings from Wyoming: Vintage postcard composite"><img src="w/ps-wyoming.jpg" alt="Greetings from Wyoming" loading="lazy"><span class="dw-cap"><b>Greetings from Wyoming</b>Vintage postcard composite</span></button></li>
+<li><button class="dw-card" type="button" aria-label="Call of Duty poster: Game poster composite"><img src="w/ps-cod.jpg" alt="Call of Duty poster" loading="lazy"><span class="dw-cap"><b>Call of Duty poster</b>Game poster composite</span></button></li>
+<li><button class="dw-card" type="button" aria-label="Toy Story vintage poster: Retro movie poster restyle"><img src="w/ps-toystory.jpg" alt="Toy Story vintage poster" loading="lazy"><span class="dw-cap"><b>Toy Story vintage poster</b>Retro movie poster restyle</span></button></li>
+<li><button class="dw-card" type="button" aria-label="Typecast magazine cover: Typography and portrait cover"><img src="w/ps-typecast.jpg" alt="Typecast magazine cover" loading="lazy"><span class="dw-cap"><b>Typecast magazine cover</b>Typography and portrait cover</span></button></li>
+<li><button class="dw-card" type="button" aria-label="Cow-elephant composite: Photo blending and masking"><img src="w/ps-cowelephant.jpg" alt="Cow-elephant composite" loading="lazy"><span class="dw-cap"><b>Cow-elephant composite</b>Photo blending and masking</span></button></li>
+<li><button class="dw-card" type="button" aria-label="Citrus Lane Farms ad: Product photo with brand logo"><img src="w/ps-citrus.jpg" alt="Citrus Lane Farms ad" loading="lazy"><span class="dw-cap"><b>Citrus Lane Farms ad</b>Product photo with brand logo</span></button></li>
+<li><button class="dw-card" type="button" aria-label="Instagram ad mockup: Five Guys ad placed in a phone mockup"><img src="w/ps-instagram.jpg" alt="Instagram ad mockup" loading="lazy"><span class="dw-cap"><b>Instagram ad mockup</b>Five Guys ad placed in a phone mockup</span></button></li>
+</ul></div>
+<div class="dw-row" id="id-work">
+<div class="dw-label"><img src="w/icon-id.png" alt="" width="44" height="44"><h3>InDesign</h3><span>8 projects</span></div>
+<ul class="dw-grid">
+<li><button class="dw-card" type="button" aria-label="College Journey magazine: Cover: freshman 2025 to senior 2026"><img src="w/id-journey.jpg" alt="College Journey magazine" loading="lazy"><span class="dw-cap"><b>College Journey magazine</b>Cover: freshman 2025 to senior 2026</span></button></li>
+<li><button class="dw-card" type="button" aria-label="A Glimpse Into My Life: Personal magazine cover"><img src="w/id-glimpse.jpg" alt="A Glimpse Into My Life" loading="lazy"><span class="dw-cap"><b>A Glimpse Into My Life</b>Personal magazine cover</span></button></li>
+<li><button class="dw-card" type="button" aria-label="Ellen DeGeneres Campus brochure: Tri-fold for the Dian Fossey Gorilla Fund"><img src="w/id-brochure.jpg" alt="Ellen DeGeneres Campus brochure" loading="lazy"><span class="dw-cap"><b>Ellen DeGeneres Campus brochure</b>Tri-fold for the Dian Fossey Gorilla Fund</span></button></li>
+<li><button class="dw-card" type="button" aria-label="Dian Fossey Gorilla Fund: Brochure cover artwork"><img src="w/id-gorillafund-v2.png" alt="Dian Fossey Gorilla Fund" loading="lazy"><span class="dw-cap"><b>Dian Fossey Gorilla Fund</b>Brochure cover artwork</span></button></li>
+<li><button class="dw-card" type="button" aria-label="Digital marketing portfolio: Portfolio cover"><img src="w/id-portfolio.jpg" alt="Digital marketing portfolio" loading="lazy"><span class="dw-cap"><b>Digital marketing portfolio</b>Portfolio cover</span></button></li>
+<li><button class="dw-card" type="button" aria-label="Introducing me: About-me and contents spread"><img src="w/id-contents.jpg" alt="Introducing me" loading="lazy"><span class="dw-cap"><b>Introducing me</b>About-me and contents spread</span></button></li>
+<li><button class="dw-card" type="button" aria-label="Trivia Night poster: Event poster"><img src="w/id-trivia.jpg" alt="Trivia Night poster" loading="lazy"><span class="dw-cap"><b>Trivia Night poster</b>Event poster</span></button></li>
+<li><button class="dw-card" type="button" aria-label="Business card: Personal business card"><img src="w/id-card.jpg" alt="Business card" loading="lazy"><span class="dw-cap"><b>Business card</b>Personal business card</span></button></li>
+</ul></div>
+</section><section id="education" class="sec flow ed" aria-labelledby="ed-title">
+<div class="ed-hero">
+<h2 id="ed-title">Education</h2>
+<p class="ed-script">James Madison University</p>
+<p class="ed-label">Class of 2027</p>
+<svg class="ed-spark" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0c.6 6.6 5.4 11.4 12 12-6.6.6-11.4 5.4-12 12-.6-6.6-5.4-11.4-12-12C6.6 11.4 11.4 6.6 12 0z"/></svg>
+</div>
+<article class="ed-card ed-degree">
+<h3>Bachelor of Business Administration</h3>
+<p class="ed-meta">College of Business · Harrisonburg, VA</p>
+<dl class="ed-facts">
+<div><dt>Major</dt><dd>Marketing</dd></div>
+<div><dt>Graduating</dt><dd>May 2027</dd></div>
+<div><dt>Honors</dt><dd>Dean’s List, Spring 2025</dd></div>
+</dl></article>
+<h3 class="ed-h"><span>Adobe Certified Professional</span></h3>
+<p class="ed-lead">Certified in all three design programs. Hover over a certificate to see it up close.</p>
+<ul class="dw-grid ed-certs">
+<li><button class="dw-card ed-cert" type="button" aria-label="Adobe Certified Professional: Graphic Design &amp; Illustration Using Adobe Illustrator, March 2026"><img src="e/cert-illustrator.jpg" alt="Adobe Certified Professional certificate: Graphic Design &amp; Illustration Using Adobe Illustrator" loading="lazy"><span class="dw-cap"><b>Adobe Certified Professional</b>Graphic Design &amp; Illustration Using Adobe Illustrator · March 2026</span></button><p class="ed-cert-label"><img src="a/3b2ac8ab.png" alt="" width="28" height="28"><span>Graphic Design &amp; Illustration Using Adobe Illustrator<small>March 2026</small></span></p></li>
+<li><button class="dw-card ed-cert" type="button" aria-label="Adobe Certified Professional: Print &amp; Digital Media Publication Using Adobe InDesign, March 2026"><img src="e/cert-indesign.jpg" alt="Adobe Certified Professional certificate: Print &amp; Digital Media Publication Using Adobe InDesign" loading="lazy"><span class="dw-cap"><b>Adobe Certified Professional</b>Print &amp; Digital Media Publication Using Adobe InDesign · March 2026</span></button><p class="ed-cert-label"><img src="w/icon-id.png" alt="" width="28" height="28"><span>Print &amp; Digital Media Publication Using Adobe InDesign<small>March 2026</small></span></p></li>
+<li><button class="dw-card ed-cert" type="button" aria-label="Adobe Certified Professional: Visual Design Using Adobe Photoshop, May 2026"><img src="e/badge-photoshop.png" alt="Adobe Certified Professional certificate: Visual Design Using Adobe Photoshop" loading="lazy"><span class="dw-cap"><b>Adobe Certified Professional</b>Visual Design Using Adobe Photoshop · May 2026</span></button><p class="ed-cert-label"><img src="a/777228a8.png" alt="" width="28" height="28"><span>Visual Design Using Adobe Photoshop<small>May 2026</small></span></p></li>
+</ul>
+<h3 class="ed-h"><span>More Certifications</span></h3>
+<div class="ed-card"><ul class="ed-list">
+<li><span class="ed-code">HubSpot Academy</span><b>Social Media Certified</b><span class="ed-note">October 2026</span></li>
+<li><span class="ed-code">Anthropic</span><b>Claude Academy: Claude Code 101</b><span class="ed-note">September 2026</span></li>
+<li><span class="ed-code">Anthropic</span><b>Claude Academy: Claude 101</b><span class="ed-note">September 2026</span></li>
+<li><span class="ed-code">HubSpot Academy</span><b>Digital Marketing Certified</b><span class="ed-note">August 2026</span></li>
+<li><span class="ed-code">CITI Program</span><b>Social &amp; Behavioral Research: Human Subjects Research</b><span class="ed-note">March 2026</span></li>
+<li><span class="ed-code">LinkedIn Learning</span><b>Market Research: Qualitative</b><span class="ed-note">March 2026</span></li>
+<li><span class="ed-code">LinkedIn Learning</span><b>Storytelling for Advertising Campaigns</b><span class="ed-note">February 2026</span></li>
+</ul>
+<p class="ed-verify"><a href="https://www.linkedin.com/in/lindsay-marshall" target="_blank" rel="noopener">See every credential on LinkedIn &rarr;</a></p></div>
+<h3 class="ed-h"><span>Relevant Coursework</span></h3>
+<div class="ed-card ed-course-card">
+<details class="ed-drop"><summary><span class="ed-group">Marketing</span></summary>
+<div class="ed-feature one portrait">
+<div class="ed-feature-text"><span class="ed-code">MKTG 384 · Integrated Marketing Communications</span><b>IMC plan: Dian Fossey Gorilla Fund</b>
+<p>As Studio Six, our six-person agency team wrote a complete integrated marketing communications plan for the Dian Fossey Gorilla Fund, built around the campaign theme “Be the Reason They Thrive – Act Now.” It covers research, segmentation, targeting and positioning, the creative brief, and plans and budgets for digital, social media, sales promotion, out-of-home and public relations, plus a media flowchart and content calendar.</p>
+<p>My role: organizing and refining the written content throughout the plan and helping shape its visual direction so the final presentation felt polished and cohesive.</p>
+</div><ul class="dw-grid ed-certs ed-shots">
+<li><button class="dw-card ed-open" type="button" data-open-doc="imc" aria-label="Read the full campaign plan"><img src="imc/page-01.jpg" alt="Cover of the Dian Fossey Gorilla Fund Integrated Marketing Communications Plan" loading="lazy"><span class="ed-open-tag">Read the full campaign plan &rarr;</span></button></li>
+</ul></div>
+<ul class="ed-list">
+<li><span class="ed-code">MKTG 331</span><b>Creating Marketing Designs: Digital Vector Techniques</b><span class="ed-note">Adobe Illustrator</span></li>
+<li><span class="ed-code">MKTG 332</span><b>Creating Marketing Designs: Visual Editing &amp; Documents</b><span class="ed-note">Adobe Photoshop and InDesign</span></li>
+<li><span class="ed-code">MKTG 385</span><b>Consumer Behavior</b></li>
+<li><span class="ed-code">MKTG 410</span><b>Social Media Marketing</b></li>
+<li><span class="ed-code">MKTG 430</span><b>Professional Selling</b></li>
+<li><span class="ed-code">MKTG 482</span><b>Marketing Analytics</b></li>
+<li><span class="ed-code">MKTG 485</span><b>Marketing Management</b></li>
+<li><span class="ed-code">MKTG 494</span><b>Marketing Internship</b><span class="ed-note">Five Guys, Summer 2026</span></li>
+</ul>
+</details>
+<details class="ed-drop"><summary><span class="ed-group">Business Core</span></summary>
+<div class="ed-feature one portrait">
+<div class="ed-feature-text"><span class="ed-code">COB 300 · Integrated Business</span><b>Business plan: SmartStep, LLC</b>
+<p>One semester that combines management, finance, operations and marketing into a single course. Our nine-person team built a complete plan to launch SmartStep, a sensor-enabled smart insole that pairs with a mobile app to track stride, posture and weight distribution and help prevent injuries.</p>
+<div class="ed-learned"><h5>Concepts I learned</h5><ul><li>Organizational charts and compensation design: pay, benefits and the skills each role needs</li><li>Market segmentation and target market selection</li><li>Market sizing and demand forecasting</li><li>Positioning and competitive analysis</li><li>The marketing mix: product, price, place and promotion</li><li>Process mapping and quality assurance</li><li>Inventory, supplier and distribution planning</li><li>Capacity planning</li><li>Building an income statement, balance sheet and cash flow statement</li><li>Ratio analysis: liquidity, asset management and profitability</li><li>Startup financing: founder investment and a bank loan</li></ul></div>
+<div class="ed-actions"><a class="ed-project ed-ghost" href="https://www.linkedin.com/in/lindsay-marshall/details/projects/" target="_blank" rel="noopener">See the project on LinkedIn &rarr;</a></div>
+</div><ul class="dw-grid ed-certs ed-shots">
+<li><button class="dw-card ed-open" type="button" data-open-doc="bp" aria-label="Read the full business plan"><img src="bplan/page-01.jpg" alt="Cover of the SmartStep business plan" loading="lazy"><span class="ed-open-tag">Read the full business plan &rarr;</span></button></li>
+</ul></div>
+<ul class="ed-list">
+<li><span class="ed-code">COB 241</span><b>Financial Accounting</b><span class="ed-note">Financial statements and reporting</span></li>
+<li><span class="ed-code">COB 242</span><b>Managerial Accounting</b><span class="ed-note">Costing, budgeting and business decisions</span></li>
+<li><span class="ed-code">CIS 221</span><b>Principles of Programming</b><span class="ed-note">Coding fundamentals</span></li>
+<li><span class="ed-code">COB 204</span><b>Computer Information Systems</b><span class="ed-note">Business information systems</span></li>
+<li><span class="ed-code">COB 191 · 291</span><b>Business Analytics I &amp; II</b><span class="ed-note">Statistics and data analysis</span></li>
+<li><span class="ed-code">COB 202</span><b>Interpersonal Skills</b><span class="ed-note">Teamwork and communication</span></li>
+</ul>
+</details>
+</div>
+<dialog class="plan-reader" id="bp-reader" aria-label="SmartStep, LLC · Business Plan" data-pages="[&quot;bplan/page-01.jpg&quot;, &quot;bplan/page-02.jpg&quot;, &quot;bplan/page-03.jpg&quot;, &quot;bplan/page-04.jpg&quot;, &quot;bplan/page-05.jpg&quot;, &quot;bplan/page-06.jpg&quot;, &quot;bplan/page-07.jpg&quot;, &quot;bplan/page-08.jpg&quot;, &quot;bplan/page-09.jpg&quot;, &quot;bplan/page-10.jpg&quot;, &quot;bplan/page-11.jpg&quot;, &quot;bplan/page-12.jpg&quot;, &quot;bplan/page-13.jpg&quot;, &quot;bplan/page-14.jpg&quot;, &quot;bplan/page-15.jpg&quot;, &quot;bplan/page-16.jpg&quot;, &quot;bplan/page-17.jpg&quot;, &quot;bplan/page-18.jpg&quot;, &quot;bplan/page-19.jpg&quot;, &quot;bplan/page-20.jpg&quot;, &quot;bplan/page-21.jpg&quot;, &quot;bplan/page-22.jpg&quot;, &quot;bplan/page-23.jpg&quot;, &quot;bplan/page-24.jpg&quot;, &quot;bplan/page-25.jpg&quot;, &quot;bplan/page-26.jpg&quot;, &quot;bplan/page-27.jpg&quot;, &quot;bplan/page-28.jpg&quot;, &quot;bplan/page-29.jpg&quot;, &quot;bplan/page-30.jpg&quot;, &quot;bplan/page-31.jpg&quot;, &quot;bplan/page-32.jpg&quot;]"><div class="pr-bar"><b>SmartStep, LLC · Business Plan</b><span>Team 11 · COB 300 · Fall 2025</span><button type="button" class="pr-close" data-close-doc aria-label="Close the document">Close &times;</button></div><div class="pr-scroll"><div class="pr-page"><p class="pr-loading">Loading…</p></div></div></dialog>
+<dialog class="plan-reader" id="imc-reader" aria-label="Dian Fossey Gorilla Fund · IMC Plan" data-pages="[&quot;imc/page-01.jpg&quot;, &quot;imc/page-02.jpg&quot;, &quot;imc/page-03.jpg&quot;, &quot;imc/page-04.jpg&quot;, &quot;imc/page-06.jpg&quot;, &quot;imc/page-07.jpg&quot;, &quot;imc/page-08.jpg&quot;, &quot;imc/page-09.jpg&quot;, &quot;imc/page-10.jpg&quot;, &quot;imc/page-11.jpg&quot;, &quot;imc/page-12.jpg&quot;, &quot;imc/page-13.jpg&quot;, &quot;imc/page-14.jpg&quot;, &quot;imc/page-15.jpg&quot;, &quot;imc/page-16.jpg&quot;, &quot;imc/page-17.jpg&quot;, &quot;imc/page-18.jpg&quot;, &quot;imc/page-19.jpg&quot;, &quot;imc/page-20.jpg&quot;, &quot;imc/page-21.jpg&quot;, &quot;imc/page-22.jpg&quot;, &quot;imc/page-23.jpg&quot;, &quot;imc/page-24.jpg&quot;, &quot;imc/page-25.jpg&quot;, &quot;imc/page-26.jpg&quot;, &quot;imc/page-27.jpg&quot;, &quot;imc/page-28.jpg&quot;, &quot;imc/page-29.jpg&quot;, &quot;imc/page-30.jpg&quot;, &quot;imc/page-31.jpg&quot;, &quot;imc/page-32.jpg&quot;, &quot;imc/page-33.jpg&quot;, &quot;imc/page-34.jpg&quot;, &quot;imc/page-35.jpg&quot;, &quot;imc/page-36.jpg&quot;, &quot;imc/page-37.jpg&quot;, &quot;imc/page-38.jpg&quot;, &quot;imc/page-39.jpg&quot;, &quot;imc/page-40.jpg&quot;, &quot;imc/page-41.jpg&quot;, &quot;imc/page-42.jpg&quot;, &quot;imc/page-43.jpg&quot;, &quot;imc/page-44.jpg&quot;, &quot;imc/page-45.jpg&quot;, &quot;imc/page-46.jpg&quot;, &quot;imc/page-47.jpg&quot;, &quot;imc/page-48.jpg&quot;, &quot;imc/page-49.jpg&quot;, &quot;imc/page-50.jpg&quot;, &quot;imc/page-51.jpg&quot;, &quot;imc/page-52.jpg&quot;, &quot;imc/page-53.jpg&quot;, &quot;imc/page-54.jpg&quot;, &quot;imc/page-55.jpg&quot;, &quot;imc/page-56.jpg&quot;, &quot;imc/page-57.jpg&quot;, &quot;imc/page-58.jpg&quot;, &quot;imc/page-59.jpg&quot;, &quot;imc/page-60.jpg&quot;, &quot;imc/page-61.jpg&quot;, &quot;imc/page-62.jpg&quot;, &quot;imc/page-63.jpg&quot;, &quot;imc/page-64.jpg&quot;, &quot;imc/page-65.jpg&quot;, &quot;imc/page-66.jpg&quot;, &quot;imc/page-67.jpg&quot;, &quot;imc/page-68.jpg&quot;, &quot;imc/page-69.jpg&quot;, &quot;imc/page-70.jpg&quot;, &quot;imc/page-71.jpg&quot;, &quot;imc/page-72.jpg&quot;, &quot;imc/page-73.jpg&quot;, &quot;imc/page-74.jpg&quot;, &quot;imc/page-75.jpg&quot;, &quot;imc/page-76.jpg&quot;, &quot;imc/page-77.jpg&quot;, &quot;imc/page-78.jpg&quot;, &quot;imc/page-79.jpg&quot;, &quot;imc/page-80.jpg&quot;, &quot;imc/page-81.jpg&quot;, &quot;imc/page-82.jpg&quot;, &quot;imc/page-83.jpg&quot;, &quot;imc/page-84.jpg&quot;, &quot;imc/page-85.jpg&quot;, &quot;imc/page-86.jpg&quot;, &quot;imc/page-87.jpg&quot;, &quot;imc/page-88.jpg&quot;, &quot;imc/page-89.jpg&quot;, &quot;imc/page-90.jpg&quot;, &quot;imc/page-91.jpg&quot;, &quot;imc/page-92.jpg&quot;, &quot;imc/page-93.jpg&quot;]"><div class="pr-bar"><b>Dian Fossey Gorilla Fund · IMC Plan</b><span>Studio Six · MKTG 384 · Spring 2026</span><button type="button" class="pr-close" data-close-doc aria-label="Close the document">Close &times;</button></div><div class="pr-scroll"><div class="pr-page"><p class="pr-loading">Loading…</p></div></div></dialog>
+</section><nav class="pager" aria-label="Page"><a class="prev" id="pg-prev" href="#home"><small>Previous</small><span></span></a><a class="next" id="pg-next" href="#about"><small>Next</small><span></span></a></nav>
+</main>
+<script>
+(function () {
+  var vids = Array.prototype.slice.call(document.querySelectorAll('.vid video'));
+  var still = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if ('IntersectionObserver' in window && !still) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) { e.target.play().catch(function () {}); } else { e.target.pause(); }
+      });
+    }, { threshold: 0.35 });
+    vids.forEach(function (v) { io.observe(v); });
+  }
+  function setIcon(b, muted) {
+    b.textContent = muted ? '🔇' : '🔊';
+    b.setAttribute('aria-label', muted ? 'Turn sound on' : 'Turn sound off');
+  }
+  document.querySelectorAll('.vid .snd').forEach(function (b) {
+    b.addEventListener('click', function () {
+      var v = b.parentElement.querySelector('video');
+      v.muted = !v.muted;
+      if (!v.muted) {
+        vids.forEach(function (o) {
+          if (o !== v) { o.muted = true; setIcon(o.parentElement.querySelector('.snd'), true); }
+        });
+      }
+      setIcon(b, v.muted);
+      v.play().catch(function () {});
+    });
+  });
+})();
+
+(function () {
+  var btn = document.getElementById('menu-btn');
+  var menu = document.getElementById('menu');
+  var sub = document.querySelector('.has-sub');
+  var subBtn = document.getElementById('sub-btn');
+  function closeMenu() { menu.classList.remove('open'); btn.setAttribute('aria-expanded', 'false'); }
+  btn.addEventListener('click', function () {
+    var open = menu.classList.toggle('open');
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+  subBtn.addEventListener('click', function () {
+    var open = sub.classList.toggle('open');
+    subBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+  menu.addEventListener('click', function (e) {
+    if (e.target.closest('a')) { closeMenu(); sub.classList.remove('open'); subBtn.setAttribute('aria-expanded', 'false'); }
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') { closeMenu(); sub.classList.remove('open'); subBtn.setAttribute('aria-expanded', 'false'); }
+  });
+
+  // Each tab is its own page: show only the sections that belong to it
+  var VIEWS = [
+    ['home', 'Home', ['top', 'contents']],
+    ['about', 'About', ['about']],
+    ['education', 'Education', ['education']],
+    ['skills', 'Skills', ['skills']],
+    ['designwork', 'Design Work', ['designwork']],
+    ['experience', 'Experience', ['experience']],
+    ['fiveguys', 'Five Guys', ['fiveguys']],
+    ['gravity', 'Gravity Group', ['gravity']],
+    ['chbs', 'JMU CHBS', ['chbs']],
+    ['cardinals', 'Front Royal Cardinals', ['cardinals']],
+    ['doordash', 'DoorDash', ['doordash']],
+    ['photography', 'Photography', ['photography']],
+    ['contact', 'Contact', ['contact']]
+  ];
+  var ALIAS = { top: 'home', contents: 'home' };
+  var links = Array.prototype.slice.call(document.querySelectorAll('.links [data-sec]'));
+  var secs = Array.prototype.slice.call(document.querySelectorAll('.sec'));
+  var prev = document.getElementById('pg-prev'), next = document.getElementById('pg-next');
+  function find(id) {
+    id = ALIAS[id] || id;
+    for (var i = 0; i < VIEWS.length; i++) { if (VIEWS[i][0] === id || VIEWS[i][2].indexOf(id) !== -1) return i; }
+    return 0;
+  }
+  function show(id, fromHash) {
+    // an id inside a page (like a gallery row) opens that page and scrolls to it
+    var target = null;
+    if (!ALIAS[id] && !VIEWS.some(function (x) { return x[0] === id; })) {
+      var el = id && document.getElementById(id);
+      var sec = el && el.closest('.sec');
+      if (sec) { target = el; id = sec.id; }
+    }
+    var i = find(id), v = VIEWS[i];
+    secs.forEach(function (s) { s.hidden = v[2].indexOf(s.id) === -1; });
+    links.forEach(function (a) { a.classList.toggle('on', a.dataset.sec.split(' ').indexOf(v[0]) !== -1); });
+    var p = VIEWS[i - 1], n = VIEWS[i + 1];
+    prev.hidden = !p; next.hidden = !n;
+    if (p) { prev.href = '#' + p[0]; prev.querySelector('span').textContent = p[1]; }
+    if (n) { next.href = '#' + n[0]; next.querySelector('span').textContent = n[1]; }
+    document.title = (v[0] === 'home' ? '' : v[1] + ' · ') + 'Lindsay Marshall Portfolio';
+    if (target) { target.scrollIntoView({ block: 'start' }); window.scrollBy(0, -70); }
+    else { window.scrollTo({ top: 0, behavior: 'instant' }); }
+    if (!fromHash) { try { history.replaceState(null, '', '#' + v[0]); } catch (e) {} }
+  }
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest('a[href^="#"]');
+    if (!a) return;
+    e.preventDefault();
+    show(a.getAttribute('href').slice(1));
+  });
+  window.addEventListener('hashchange', function () { show(location.hash.slice(1), true); });
+  show((location.hash || '#home').slice(1), true);
+})();
+
+// Design Work: tap a design to pop it out on touch screens (hover does it with a mouse)
+(function () {
+  var cards = Array.prototype.slice.call(document.querySelectorAll('.dw-card:not(.ed-open)'));
+  cards.forEach(function (c) {
+    c.addEventListener('click', function (e) {
+      e.stopPropagation();
+      var on = !c.classList.contains('pop');
+      cards.forEach(function (o) { o.classList.remove('pop'); });
+      if (on) c.classList.add('pop');
+    });
+  });
+  document.addEventListener('click', function () { cards.forEach(function (o) { o.classList.remove('pop'); }); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') cards.forEach(function (o) { o.classList.remove('pop'); }); });
+})();
+
+// Document readers: page images for each plan, loaded the first time a reader opens
+(function () {
+  function loadPages(dlg) {
+    var page = dlg.querySelector('.pr-page');
+    page.classList.add('pr-pages');
+    page.innerHTML = JSON.parse(dlg.dataset.pages).map(function (src, i) {
+      return '<img src="' + src + '" alt="Page ' + (i + 1) + '" loading="lazy" width="1000" height="1294">';
+    }).join('');
+  }
+  document.querySelectorAll('[data-open-doc]').forEach(function (b) {
+    b.addEventListener('click', function (e) {
+      e.stopPropagation();
+      var dlg = document.getElementById(b.dataset.openDoc + '-reader');
+      if (dlg.showModal) dlg.showModal(); else dlg.setAttribute('open', '');
+      if (!dlg.dataset.loaded) { dlg.dataset.loaded = '1'; loadPages(dlg); }
+    });
+  });
+  document.querySelectorAll('[data-close-doc]').forEach(function (b) {
+    b.addEventListener('click', function () { b.closest('dialog').close(); });
+  });
+})();
+
+</script>
+</body>
+</html>
