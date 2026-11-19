@@ -549,24 +549,20 @@ a.t[href^="http"] { text-decoration: underline; text-decoration-color: var(--cor
 .hm-results { padding: 44px 12px 0; scroll-margin-top: 80px; }
 .hm-results h2 { display: flex; align-items: center; gap: 18px; margin: 0 0 24px; font: 400 clamp(44px, 6vw, 72px)/1 var(--display); text-transform: uppercase; color: var(--peach); }
 .hm-results h2::after { content: ""; flex: 1; height: 2px; background: var(--coral); }
-.hm-stats { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 14px; }
+.hm-stats { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; }
 .hm-stat { display: flex; flex-direction: column; gap: 8px; height: 100%; box-sizing: border-box; padding: 18px 16px 16px; border: 2px solid rgba(255, 211, 184, .25); border-radius: 14px;
   color: var(--peach); text-decoration: none; transition: border-color .2s, transform .2s ease, background-color .2s; }
 .hm-stat b { font: 400 clamp(44px, 5vw, 64px)/1 var(--display); color: var(--coral); }
 .hm-stat > span { font: 700 15px/1.35 var(--sans); flex: 1; }
 .hm-stat small { font: 600 11px var(--sans); letter-spacing: .14em; text-transform: uppercase; color: var(--peach); opacity: .8; }
-.hm-stat:hover, .hm-stat:focus-visible { border-color: var(--coral); background: rgba(255, 140, 97, .08); transform: translateY(-3px); }
-.hm-stat:focus-visible { outline: 2px solid var(--coral); outline-offset: 3px; }
-@media (max-width: 900px) { .hm-stats { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+@media (max-width: 900px) { .hm-stats { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 @media (max-width: 699px) {
   .hm-results { padding: 34px 0 0; }
   .hm-results h2 { gap: 12px; margin-bottom: 18px; font-size: clamp(32px, 10vw, 48px); white-space: nowrap; }
   .hm-results h2 .hm-spark { width: 28px; height: 28px; }
   .hm-stats { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
-  .hm-stats li:last-child { grid-column: 1 / -1; }
   .hm-stat { padding: 14px 14px 12px; } .hm-stat b { font-size: 44px; } .hm-stat > span { font-size: 14px; }
 }
-@media (prefers-reduced-motion: reduce) { .hm-stat { transition: none; } .hm-stat:hover { transform: none; } }
 .hm-explore { padding: 44px 12px 0; scroll-margin-top: 80px; }
 .hm-explore h2 { display: flex; align-items: center; gap: 18px; margin: 0 0 28px; font: 400 clamp(44px, 6vw, 72px)/1 var(--display); text-transform: uppercase; color: var(--peach); }
 .hm-explore h2::after { content: ""; flex: 1; height: 2px; background: var(--coral); }
@@ -741,6 +737,15 @@ a.t[href^="http"] { text-decoration: underline; text-decoration-color: var(--cor
 <div class="hm-frame"><img src="a/283b1529.jpg" alt=""><img src="a/9d5ee415.png" alt="Lindsay Marshall"></div>
 <svg class="hm-spark hm-spark-b" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0c.6 6.6 5.4 11.4 12 12-6.6.6-11.4 5.4-12 12-.6-6.6-5.4-11.4-12-12C6.6 11.4 11.4 6.6 12 0z"/></svg>
 </div>
+</div>
+<div class="hm-results" aria-labelledby="hm-results-title">
+<h2 id="hm-results-title"><svg class="hm-spark" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0c.6 6.6 5.4 11.4 12 12-6.6.6-11.4 5.4-12 12-.6-6.6-5.4-11.4-12-12C6.6 11.4 11.4 6.6 12 0z"/></svg><span>Results at a Glance</span></h2>
+<ul class="hm-stats">
+<li class="hm-stat"><b>1M+</b><span>Views on content I’ve helped create</span></li>
+<li class="hm-stat"><b>15K+</b><span>Interactions</span></li>
+<li class="hm-stat"><b>900+</b><span>New followers</span></li>
+<li class="hm-stat"><b>9</b><span>Brands and clients across 6 industries</span></li>
+</ul>
 </div>
 <div class="hm-explore" id="hm-explore">
 <h2><svg class="hm-spark" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0c.6 6.6 5.4 11.4 12 12-6.6.6-11.4 5.4-12 12-.6-6.6-5.4-11.4-12-12C6.6 11.4 11.4 6.6 12 0z"/></svg><span>Explore My Work</span></h2>
